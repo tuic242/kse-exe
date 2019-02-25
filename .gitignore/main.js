@@ -38,7 +38,7 @@ bot.on('message', function (message) {
 })
 
 
-bot.login('NTQ4MTI1OTM1NjYxMjE5ODQx.D1CJqQ.64bpFaJYLOAeYviXJG6mgl9ahVg')
+bot.login('NTQ4MTI1OTM1NjYxMjE5ODQx.D1XfSQ.cx2EbH2ynBG5XswrTWok80QZPeE')
 
 
 
