@@ -22,7 +22,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'Help.exe') {
-        message.channel.send('***Rappelle : Je suis en développement*** \n**Mais commande grand public : ** \n**[InfoJ.exe] Cette commande permet de connaitre le statut des métiers (Si il son ouvert ou fermer) ** \n**[S2.exe] Pas besoin de l’expliquer…….. ** \n \n**Mais commande spécial ** \n**[HelpJ.exe] Cette commande est réserver uniquement au chef métier si une personne vient a \nl’utiliser autre, elle pourrait se voir averti**')
+        message.channel.send('***Rappelle : Je suis en développement*** \n**Mes commande grand public : ** \n**[InfoJ.exe] Cette commande permet de connaitre le statut des métiers (Si il son ouvert ou fermer) ** \n**[S2.exe] Pas besoin de l’expliquer…….. ** \n \n**Mes commande spécial ** \n**[HelpJ.exe] Cette commande est réserver uniquement au chef métier si une personne vient a \nl’utiliser autre, elle pourrait se voir averti**')
     }
 })
 
@@ -105,7 +105,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'P1.exe') {
-        message.guild.send('Test')
+        message.channel.guild.send('Test')
     }
 })
 
