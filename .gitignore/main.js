@@ -16,7 +16,7 @@ bot.on('ready', () => {
 
 bot.on('message', function (message) {
     if (message.content === 'Dit.exe') {
-        message.channel.send('**Tu te souviens de cette commande ses bien mais je suis maintenant fonctionnelle alors utilise help.exe**')
+        message.channel.send('**Tu te souviens de cette commande c est bien mais je suis maintenant fonctionnelle alors utilise help.exe**')
     }
 })
 
