@@ -8,7 +8,7 @@ app.set('port',(process.env.PORT || 5000))
 
 
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: 'Ne pas faire usage du lien envoyer en mp', type: 0}});
+    bot.user.setPresence({ game: { name: 'Bot By Tuic242 [Dit.exe]', type: 0}});
     console.log("Bot Ready !");
 })
 
@@ -37,7 +37,7 @@ bot.on('message', function (message) {
     }
 })
 
-client.on('message', msg => {
+bot.on('message', msg => {
     if (msg.guild && msg.content.startsWith('/private')) {
       let text = msg.content.slice('/private'.length); // cuts off the /private part
       msg.guild.members.forEach(member => {
