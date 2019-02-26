@@ -13,10 +13,6 @@ bot.on('ready', () => {
     console.log("Bot Ready !");
 })
 
-bot.on("guildMemberAdd", (gMembAdd) => {
-    gMembAdd.guild.channels.find("name", "test").send(gMembAdd.toString() + "Test");
-    gMembAdd.send("Test");
-});
 
 bot.on('message', function (message) {
     if (message.content === 'Dit.exe') {
@@ -109,7 +105,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'P1.exe') {
-        message.guild.send('Test')
+        guild.send('Test')
     }
 })
 
