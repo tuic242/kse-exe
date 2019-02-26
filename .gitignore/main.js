@@ -103,6 +103,13 @@ bot.on('message', function (message) {
     }
 })
 
+bot.on('message', function (message) {
+    if (message.content === 'P1.exe') {
+        message.author.send("**Ceci est message teste….. Exécuter par Tuic242**")
+    }
+})
+
+
 
 
 
