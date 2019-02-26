@@ -9,7 +9,7 @@ app.set('port',(process.env.PORT || 5000))
 
 
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: 'Bot By Tuic242 [Dit.exe]', type: 0}});
+    bot.user.setPresence({ game: { name: 'NE PAS UTILISER LE LIEN ENVOYER EN DM/MP', type: 0}});
     console.log("Bot Ready !");
 })
 
