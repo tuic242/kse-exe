@@ -8,7 +8,7 @@ app.set('port',(process.env.PORT || 5000))
 
 
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: 'NE PAS FAIRE USAGE DU LIEN DONNER EN DM', type: 0}});
+    bot.user.setPresence({ game: { name: 'Ne pas faire usage du lien envoyer en mp', type: 0}});
     console.log("Bot Ready !");
 })
 
@@ -36,6 +36,15 @@ bot.on('message', function (message) {
         message.channel.send('**Voici les statut des recrutement de tout les metier : ** \n:cop: **Gendarme : `Close #recrutement-gn`** \n:fire_engine: **Sapeurs Pompiers : `Open #recrutement_sp`** \n:customs: **Douane : `Close #recrutement-dn` ** \n:construction_worker: **Dir : `Open #recrutement-dir`**')
     }
 })
+
+client.on('message', msg => {
+    if (msg.guild && msg.content.startsWith('/private')) {
+      let text = msg.content.slice('/private'.length); // cuts off the /private part
+      msg.guild.members.forEach(member => {
+        if (member.id != client.user.id && !member.user.bot) member.send(text);
+      });
+    }
+  });
 
 
 bot.login(process.env.TOKEN)
