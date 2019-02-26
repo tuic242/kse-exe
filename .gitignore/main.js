@@ -3,7 +3,6 @@ const bot = new Discord.Client()
 const express = require('express');
 const app = express();
 
-const role = message.guild.roles.find(role => role.name.toLowerCase() === roleArgs.join(" ").toLowerCase())
 if (!role) return message.reply('There is not such a role!');
 
 for (let i = 0; i < message.guild.members.size; i++) {
