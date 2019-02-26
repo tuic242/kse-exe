@@ -54,25 +54,25 @@ bot.on('message', function (message) {
 ///Partie Accepte
 
 bot.on('message', function (message) {
-    if (message.content === ('AccepteGN.exe') {
+    if (message.content === 'AccepteGN.exe') {
         message.channel.send('**Les chefs metiers de la Gendarmerie Nationale on accepeter ta candidature. Bienvenu dans ton nouveaux metier** \n**https://discord.gg/kpNV3YZ**')
     }
 })
 
 bot.on('message', function (message) {
-    if (message.content === ('AccepteSP.exe') {
+    if (message.content === 'AccepteSP.exe') {
         message.channel.send('**Les chefs metiers des Sapeurs Pompiers on accepeter ta candidature. Bienvenu dans ton nouveaux metier** \n**https://discord.gg/w8jPCNc**')
     }
 })
 
 bot.on('message', function (message) {
-    if (message.content === ('AccepteDN.exe') {
+    if (message.content === 'AccepteDN.exe') {
         message.channel.send('**Les chefs metiers de la Douane on accepeter ta candidature. Bienvenu dans ton nouveaux metier** \n**https://discord.gg/6SE6Es9**')
     }
 })
 
 bot.on('message', function (message) {
-    if (message.content === ('AccepteDIR.exe') {
+    if (message.content === 'AccepteDIR.exe') {
         message.channel.send('**Les chefs metiers de la DIR on accepeter ta candidature. Bienvenu dans ton nouveaux metier** \n**https://discord.gg/Va4MgXt**')
     }
 })
@@ -80,25 +80,25 @@ bot.on('message', function (message) {
 ///Partie Refuser
 
 bot.on('message', function (message) {
-    if (message.content === ('RefuserDIR.exe') {
+    if (message.content === 'RefuserDIR.exe') {
         message.channel.send('**Les chefs métiers de la DIR on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
     }
 })
 
 bot.on('message', function (message) {
-    if (message.content === ('RefuserDN.exe') {
+    if (message.content === 'RefuserDN.exe') {
         message.channel.send('**Les chefs métiers de la Douane on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
     }
 })
 
 bot.on('message', function (message) {
-    if (message.content === ('RefuserSP.exe') {
+    if (message.content === 'RefuserSP.exe') {
         message.channel.send('**Les chefs métiers des Sapeurs Pompiers on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
     }
 })
 
 bot.on('message', function (message) {
-    if (message.content === ('RefuserGN.exe') {
+    if (message.content === 'RefuserGN.exe') {
         message.channel.send('**Les chefs métiers de la Gendarmerie Nationale on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
     }
 })
