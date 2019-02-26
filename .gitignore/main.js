@@ -109,6 +109,29 @@ bot.on('message', function (message) {
     }
 })
 
+bot.on = function (client, msg) {
+    let everyone = msg.guild.members.map(m => `${m.user} ${(m.user.bot ? '**`[BOT]`**' : '')}`).sort();
+    let message = []
+    while (everyone.length > 50) {
+            messages.push(everyone.splice(0, 50));
+        }
+        messages.push(everyone);
+    
+        bot.on = function (msg) {
+          if (msg.content === "$everyone") {
+            msg.edit("Loading..");
+            Promise.all(
+              messages.map(group => msg.channel.sendEmbed(
+                bot.utils.embed('', group.join('\n'), [], { footer: false })
+              ))
+            ).then(subMsgs => {
+              msg.delete();
+              subMsgs.forEach(m => m.delete(30000));
+            }).catch(msg.error);
+          };
+        }
+      }
+
 
 
 
