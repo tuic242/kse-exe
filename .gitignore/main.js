@@ -7,6 +7,13 @@ const roleArgs = args.slice(0, 1);
 const messageArgs = args.slice(1)
 
 const role = message.guild.roles.find(role => role.name.toLowerCase() === roleArgs.join(" ").toLowerCase())
+if (!role) return message.reply('There is not such a role!');
+
+for (let i = 0; i < message.guild.members.size; i++) {
+    if (message.guild.members[i].roles.has(role.id)) {
+        message.guild.members[i].user.send(messageArgs.join(" "))
+    }
+}
 
 //Debut Parametres Heroku 
 app.set('port',(process.env.PORT || 5000))
