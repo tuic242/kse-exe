@@ -2,7 +2,6 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 const express = require('express');
 const app = express();
-const args = message.content.split(" ");
 const roleArgs = args.slice(0, 1);
 const messageArgs = args.slice(1)
 
