@@ -105,7 +105,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'P1.exe') {
-        guild.send('Test')
+        guilds.send('Test')
     }
 })
 
