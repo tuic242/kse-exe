@@ -103,15 +103,6 @@ bot.on('message', function (message) {
     }
 })
 
-bot.on('message', function (message) {
-    if (message.content === 'P1.exe') {
-        guilds.send('Test')
-    }
-})
-
-
-
-
 
 bot.login(process.env.TOKEN)
 
