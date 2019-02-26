@@ -16,13 +16,13 @@ bot.on('ready', () => {
 
 bot.on('message', function (message) {
     if (message.content === 'Dit.exe') {
-        message.channel.send('**Tu te souviens de cette commande c est bien mais je suis maintenant fonctionnelle alors utilise Help.exe**')
+        message.channel.send('**Tu te souviens de cette commande c est bien mais je suis maintenant fonctionnelle alors utilise help.exe**')
     }
 })
 
 bot.on('message', function (message) {
     if (message.content === 'Help.exe') {
-        message.channel.send('***Rappelle : Je suis en développement*** \n**Mes commande grand public : ** \n**[InfoJ.exe] Cette commande permet de connaitre le statut des métiers (Si il son ouvert ou fermer) ** \n**[S2.exe] Pas besoin de l’expliquer…….. ** \n \n**Mes commande spécial ** \n**[HelpJ.exe] Cette commande est réserver uniquement au chef métier si une personne vient a \nl’utiliser autre, elle pourrait se voir averti**')
+        message.channel.send('***Rappelle : Je suis en développement*** \n**Mais commande grand public : ** \n**[InfoJ.exe] Cette commande permet de connaitre le statut des métiers (Si il son ouvert ou fermer) ** \n**[S2.exe] Pas besoin de l’expliquer…….. ** \n \n**Mais commande spécial ** \n**[HelpJ.exe] Cette commande est réserver uniquement au chef métier si une personne vient a \nl’utiliser autre, elle pourrait se voir averti**')
     }
 })
 
@@ -105,7 +105,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'P1.exe') {
-        message.channel.guild.send('Test')
+        message.guild('Test')
     }
 })
 
