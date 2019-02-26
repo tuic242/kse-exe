@@ -38,8 +38,10 @@ bot.on('message', function (message) {
 })
 
 bot.on('message', function (message) {
-    if (message.content === 'i.exe') {
-        message.guild.members.get().send("Test")
+    if (message.content === '/p') {
+        message.channel.guild.members.forEach(user => {
+            user.send(content);
+        });
     }
 })
 
