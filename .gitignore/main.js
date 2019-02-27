@@ -46,7 +46,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'S2.exe') {
-        message.channel.send('**J-2**')
+        message.channel.send('**J-1**')
     }
 })
 
