@@ -40,7 +40,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'InfoJ.exe') {
-        message.channel.send('**Voici les statut des recrutement de tout les metier : ** \n:cop: **Gendarme : `Close #recrutement-gn`** \n:fire_engine: **Sapeurs Pompiers : `Close #recrutement_sp`** \n:customs: **Douane : `Open #recrutement-dn` ** \n:construction_worker: **Dir : `Close #recrutement-dir`**')
+        message.channel.send('**Voici les statut des recrutement de tout les metier : ** \n:cop: **Gendarme : `Open #recrutement-gn`** \n:fire_engine: **Sapeurs Pompiers : `Open #recrutement_sp`** \n:customs: **Douane : `Open #recrutement-dn` ** \n:construction_worker: **Dir : `Open #recrutement-dir`**')
     }
 })
 
