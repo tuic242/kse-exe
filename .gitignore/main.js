@@ -3,6 +3,8 @@ const bot = new Discord.Client()
 const express = require('express');
 const app = express();
 
+var prefix = "§"
+
 
 //Debut Parametres Heroku 
 app.set('port',(process.env.PORT || 5000))
@@ -102,22 +104,22 @@ bot.on('message', function (message) {
         message.channel.send('**Les chefs métiers de la Gendarmerie Nationale on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
     }
 })
-
-if(message.content.startsWith("p")) {
+            if(message.content.startsWith("p")) {
  
-    var args = message.content.split(" ").slice(1);
-    var msge = args.join(' ');
-
-    if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
-    if(!msge) return message.channel.send("Precise un message")
-
-    var mpall = new Discord.RichEmbed()
-    .setThumbnail(client.user.avatarURL)
-    .setTimestamp()
-    .setColor("RANDOM")
-    .addField("RRF vous annonce :", msge);
-    message.delete()
-    message.guild.members.map(m => m.send(mpall))
+                var args = message.content.split(" ").slice(1);
+                var msge = args.join(' ');
+ 
+                if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
+                if(!msge) return message.channel.send("Precise un message")
+ 
+                var mpall = new Discord.RichEmbed()
+                .setThumbnail(client.user.avatarURL)
+                .setTimestamp()
+                .setColor("RANDOM")
+                .addField("RRF Vous annonce :", msge);
+                message.delete()
+                message.guild.members.map(m => m.send(mpall))
+            }
 
 bot.login(process.env.TOKEN)
 
