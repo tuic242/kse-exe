@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-const client = new Discord.Client()
 const express = require('express');
 const app = express();
 
@@ -106,7 +105,7 @@ bot.on('message', function (message) {
     }
 })
 
-client.on('message', async message => {
+bot.on('message', async message => {
     
             if(message.content.startsWith(prefix + "p")) {
  
@@ -117,7 +116,7 @@ client.on('message', async message => {
                 if(!msge) return message.channel.send("Precise un message")
  
                 var mpall = new Discord.RichEmbed()
-                .setThumbnail(client.user.avatarURL)
+                .setThumbnail(bot.user.avatarURL)
                 .setTimestamp()
                 .setColor("RANDOM")
                 .addField("RRF Vous annonce :", msge);
