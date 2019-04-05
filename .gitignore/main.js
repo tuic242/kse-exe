@@ -104,7 +104,8 @@ bot.on('message', function (message) {
         message.channel.send('**Les chefs métiers de la Gendarmerie Nationale on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
     }
 })
-            if(message.content.startsWith("p")) {
+
+            if(message.content.startsWith(prefix + "p")) {
  
                 var args = message.content.split(" ").slice(1);
                 var msge = args.join(' ');
