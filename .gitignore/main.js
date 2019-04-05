@@ -116,7 +116,7 @@ bot.on('message', async message => {
                 if(!msge) return message.channel.send("Precise un message")
  
                 var mpall = new Discord.RichEmbed()
-                .setThumbnail(bot.user.avatarURL)
+                .setThumbnail()
                 .setTimestamp()
                 .setColor("RANDOM")
                 .addField("RRF Vous annonce :", msge);
