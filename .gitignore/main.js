@@ -105,6 +105,8 @@ bot.on('message', function (message) {
     }
 })
 
+client.on('message', async message => {
+    
             if(message.content.startsWith(prefix + "p")) {
  
                 var args = message.content.split(" ").slice(1);
@@ -121,6 +123,9 @@ bot.on('message', function (message) {
                 message.delete()
                 message.guild.members.map(m => m.send(mpall))
             }
+
+});
+    
 
 bot.login(process.env.TOKEN)
 
