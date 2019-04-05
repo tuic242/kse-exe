@@ -105,7 +105,7 @@ bot.on('message', function (message) {
     }
 })
 
-client.on('message', async message => {
+bot.on('message', async message => {
     
             if(message.content.startsWith(prefix + "p")) {
  
