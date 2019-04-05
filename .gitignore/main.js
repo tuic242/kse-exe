@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
+const client = new Discord.Client()
 const express = require('express');
 const app = express();
 
@@ -105,7 +106,7 @@ bot.on('message', function (message) {
     }
 })
 
-bot.on('message', async message => {
+client.on('message', async message => {
     
             if(message.content.startsWith(prefix + "p")) {
  
