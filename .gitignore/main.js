@@ -11,7 +11,7 @@ app.set('port',(process.env.PORT || 5000))
 
 
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: 'Bot By Tuic242 [Dit.exe]', type: 0}});
+    bot.user.setPresence({ game: { name: 'Roblox Roleplay France [Help.exe]', type: 0}});
     console.log("Bot Ready !");
 })
 
@@ -42,13 +42,13 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'InfoJ.exe') {
-        message.channel.send('**Voici les statut des recrutement de tout les metier : ** \n:cop: **Gendarme : `Open #recrutement-gn`** \n:fire_engine: **Sapeurs Pompiers : `Open #recrutement_sp`** \n:customs: **Douane : `Open #recrutement-dn` ** \n:construction_worker: **Dir : `Open #recrutement-dir`**')
+        message.channel.send('**Voici les statut des recrutement de tout les metier : ** \n:cop: **Gendarme : `Open #recrutement-gn`** \n:fire_engine: **Sapeurs Pompiers : `Close #recrutement_sp`** \n:customs: **Douane : `Close #recrutement-dn` ** \n:construction_worker: **Dir : `Close #recrutement-dir`** \n **GRAND RECRUTEMENT BIENTOT SUR RRF**')
     }
 })
 
 bot.on('message', function (message) {
-    if (message.content === 'S2.exe') {
-        message.channel.send('**J-1**')
+    if (message.content === 'S3.exe') {
+        message.channel.send('**404**')
     }
 })
 
