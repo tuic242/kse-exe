@@ -11,7 +11,7 @@ app.set('port',(process.env.PORT || 5000))
 
 
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: 'Roblox Roleplay France [Help.exe]', type: 0}});
+    bot.user.setPresence({ game: { name: '[Help.exe]', type: 0}});
     console.log("Bot Ready !");
 })
 
@@ -42,7 +42,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'InfoJ.exe') {
-        message.channel.send('**Voici les statut des recrutement de tout les metier : ** \n:cop: **Gendarme : `Open #recrutement-gn`** \n:fire_engine: **Sapeurs Pompiers : `Close #recrutement_sp`** \n:customs: **Douane : `Close #recrutement-dn` ** \n:construction_worker: **Dir : `Close #recrutement-dir`** \n **GRAND RECRUTEMENT BIENTOT SUR RRF**')
+        message.channel.send('**Voici les statut des recrutement de tout les metier : ** \n:cop: **Gendarme : `Close #recrutement-gn`** \n:fire_engine: **Sapeurs Pompiers : `Open #recrutement_sp`** \n:customs: **Douane : `Open #recrutement-dn` ** \n:construction_worker: **Dir : `Open #recrutement-dir`**')
     }
 })
 
@@ -94,16 +94,12 @@ bot.on('message', function (message) {
 })
 
 bot.on('message', function (message) {
-    if (message.content === 'RefuserSP.exe') {
-        message.channel.send('**Les chefs métiers des Sapeurs Pompiers on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
+    if (message.content === '!help') {
+        message.channel.send('**@Moderator || Team Staff @Administrator || Team Staff Merci d aider le joueur**')
     }
 })
 
-bot.on('message', function (message) {
-    if (message.content === 'RefuserGN.exe') {
-        message.channel.send('**Les chefs métiers de la Gendarmerie Nationale on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
-    }
-})
+
 
 bot.on('message', async message => {
     
