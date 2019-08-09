@@ -95,7 +95,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === '!help') {
-        message.channel.send('**@Moderator || Team Staff @Administrator || Team Staff Merci d aider le joueur**')
+        message.channel.send('**<@&438631658196041738> <@&430666903464443904> Merci d aider le joueur**')
     }
 })
 
