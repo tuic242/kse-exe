@@ -22,7 +22,6 @@ bot.on('guildMemberRemove', member => {
 });
 
 
-
 bot.on('message', function (message) {
     if (message.content === 'Dit.exe') {
         message.channel.send('**Tu te souviens de cette commande c est bien mais je suis maintenant fonctionnelle alors utilise Help.exe**')
@@ -105,26 +104,6 @@ bot.on('message', function (message) {
         message.channel.send('**<@&438631658196041738> <@&430666903464443904> Merci d aider le joueur**')
     }
 })
-
-bot.on('message', function (message) {
-    if (message.content === 'H84484848') {
-        let uEmbed = new Discord.RichEmbed()
-        .setColor('#0099ff')
-	.setTitle('Information')
-	.setDescription('**Bienvenue sur Roblox Roleplay France**')
-	.setThumbnail('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
-	.addField('**Reglement**', 'Va le regarder <#614153976526536818>')
-	.addField('**Lien**', 'Tu pourra trouver les lien dans <#614155755662344192> ', true)
-	.addField('Roblox Roleplay France by Team Fudriqual', 'Owner : Tuic242, Jeffiste', true)
-	.setImage('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
-	.setTimestamp()
-	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
-	    
-	message.channel.send({embed: uEmbed});
-    }
-})
-
-    
 
 bot.login(process.env.TOKEN)
 
