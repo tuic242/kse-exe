@@ -15,6 +15,15 @@ bot.on('ready', () => {
     console.log("Bot Ready !");
 })
 
+bot.on('guildMemberAdd', member => {
+    bot.channels.get('613703562060496922').send(`Bienvenue à toi, bon roleplay ${member}`);
+});
+
+bot.on('guildMemberRemove', member => {
+    bot.channels.get('613703562060496922').send(`Aurevoir et bonne chance :) ${member}`);
+});
+
+
 
 bot.on('message', function (message) {
     if (message.content === 'Dit.exe') {
@@ -100,46 +109,23 @@ bot.on('message', function (message) {
 })
 
 bot.on('message', function (message) {
-    if (message.content === 'Hein') {
+    if (message.content === 'H84484848') {
         let uEmbed = new Discord.RichEmbed()
         .setColor('#0099ff')
-	.setTitle('Information/Liens')
-	.setDescription('Some description here')
-	.setThumbnail('https://i.imgur.com/wSTFkRM.png')
-	.addField('Regular field title', 'Some value here')
-	.addBlankField()
-	.addField('Inline field title', 'Some value here', true)
-	.addField('Inline field title', 'Some value here', true)
-	.addField('Inline field title', 'Some value here', true)
-	.setImage('https://i.imgur.com/wSTFkRM.png')
+	.setTitle('Information')
+	.setDescription('Bienvenue sur Roblox Roleplay France')
+	.setThumbnail('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
+	.addField('Reglement', 'Va le regarder <#614153976526536818>')
+	.addField('Lien', 'Tu pourra trouver les lien dans <#614155755662344192> ', true)
+	.addField('Roblox Roleplay France by Team Fudriqual', 'Owner : Tuic242, Jeffiste', true)
+	.setImage('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
 	.setTimestamp()
-	.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
 	    
 	message.channel.send({embed: uEmbed});
     }
 })
 
-
-bot.on('message', async message => {
-    
-            if(message.content.startsWith(prefix + "p")) {
- 
-                var args = message.content.split(" ").slice(1);
-                var msge = args.join(' ');
- 
-                if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
-                if(!msge) return message.channel.send("Precise un message")
- 
-                var mpall = new Discord.RichEmbed()
-                .setThumbnail()
-                .setTimestamp()
-                .setColor("RANDOM")
-                .addField("RRF Vous annonce :", msge);
-                message.delete()
-                message.guild.members.map(m => m.send(mpall))
-            }
-
-});
     
 
 bot.login(process.env.TOKEN)
