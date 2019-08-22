@@ -3,8 +3,6 @@ const bot = new Discord.Client()
 const express = require('express');
 const app = express();
 
-var prefix = "§"
-
 
 //Debut Parametres Heroku 
 app.set('port',(process.env.PORT || 5000))
