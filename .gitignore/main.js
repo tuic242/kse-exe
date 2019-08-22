@@ -14,11 +14,11 @@ bot.on('ready', () => {
 })
 
 bot.on('guildMemberAdd', member => {
-    bot.channels.get('613703562060496922').send(`Bienvenue à toi, bon roleplay ${member}`);
+    bot.channels.get('613703562060496922').send(`**Bienvenue à toi, bon roleplay ${member}**`);
 });
 
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('613703562060496922').send(`Aurevoir et bonne chance :) ${member}`);
+    bot.channels.get('613703562060496922').send(`**Aurevoir et bonne chance :) ${member}**`);
 });
 
 
@@ -111,10 +111,10 @@ bot.on('message', function (message) {
         let uEmbed = new Discord.RichEmbed()
         .setColor('#0099ff')
 	.setTitle('Information')
-	.setDescription('Bienvenue sur Roblox Roleplay France')
+	.setDescription('**Bienvenue sur Roblox Roleplay France**')
 	.setThumbnail('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
-	.addField('Reglement', 'Va le regarder <#614153976526536818>')
-	.addField('Lien', 'Tu pourra trouver les lien dans <#614155755662344192> ', true)
+	.addField('**Reglement**', 'Va le regarder <#614153976526536818>')
+	.addField('**Lien**', 'Tu pourra trouver les lien dans <#614155755662344192> ', true)
 	.addField('Roblox Roleplay France by Team Fudriqual', 'Owner : Tuic242, Jeffiste', true)
 	.setImage('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
 	.setTimestamp()
