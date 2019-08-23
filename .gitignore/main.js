@@ -21,6 +21,32 @@ bot.on('guildMemberRemove', member => {
     bot.channels.get('613703562060496922').send(`**Aurevoir et bonne chance :) ${member}**`);
 });
 
+module.exports.run = async (bot, message, args) => {
+
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
+  if(!args[0]) return message.channel.send("no");
+  message.channel.bulkDelete(args[0]).then(() => {
+  message.channel.send(`Clear ${args[0]} messages.`).then(msg => msg.delete(2000));
+});
+
+}
+
+module.exports.help = {
+  name: "clear"
+}
+
+module.exports.run = async (bot, message, args) => {
+
+      if(!message.member.hasPermission("ADMINISTRATOR")) return;
+      const sayMessage = args.join(" ");
+      message.delete().catch();
+      message.channel.send(sayMessage);
+
+}
+
+module.exports.help = {
+  name: "say"
+}
 
 bot.on('message', function (message) {
     if (message.content === 'Dit.exe') {
@@ -105,15 +131,6 @@ bot.on('message', function (message) {
     }
 })
 
-module.exports.run = async (bot, message, args) => {
-
-  //!clear 15
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("**Tu n'a pas la permission.**")
-  if(!args[0]) return message.channel.send("**oof**");
-  message.channel.bulkDelete(args[0]).then(() => {
-    message.channel.send(`**J'ai supprimé ${args[0]} message**`).then(msg => msg.delete(5000));
-  });
-} 
 
 bot.login(process.env.TOKEN)
 
