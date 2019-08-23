@@ -21,7 +21,7 @@ bot.on('guildMemberRemove', member => {
     bot.channels.get('613703562060496922').send(`**Aurevoir et bonne chance :) ${member}**`);
 });
 
-client.on('message', function(message) {
+bot.on('message', function(message) {
     if (message.content == "!clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
