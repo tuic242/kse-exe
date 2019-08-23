@@ -26,7 +26,7 @@ bot.on('message', function(message) {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
                .then(function(list){
-                    message.channel.bulkDelete(list);
+                    message.channel.bulkDelete(args[0]);
                 }, function(err){message.channel.send("Error.exe")})                        
         }
     }
