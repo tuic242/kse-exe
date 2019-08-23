@@ -21,32 +21,17 @@ bot.on('guildMemberRemove', member => {
     bot.channels.get('613703562060496922').send(`**Aurevoir et bonne chance :) ${member}**`);
 });
 
-module.exports.run = async (bot, message, args) => {
+client.on('message', function(message) {
+    if (message.content == "!clear") {
+        if (message.member.hasPermission("MANAGE_MESSAGES")) {
+            message.channel.fetchMessages()
+               .then(function(list){
+                    message.channel.bulkDelete(list);
+                }, function(err){message.channel.send("Error.exe")})                        
+        }
+    }
 
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No.");
-  if(!args[0]) return message.channel.send("no");
-  message.channel.bulkDelete(args[0]).then(() => {
-  message.channel.send(`Clear ${args[0]} messages.`).then(msg => msg.delete(2000));
 });
-
-}
-
-module.exports.help = {
-  name: "clear"
-}
-
-module.exports.run = async (bot, message, args) => {
-
-      if(!message.member.hasPermission("ADMINISTRATOR")) return;
-      const sayMessage = args.join(" ");
-      message.delete().catch();
-      message.channel.send(sayMessage);
-
-}
-
-module.exports.help = {
-  name: "say"
-}
 
 bot.on('message', function (message) {
     if (message.content === 'Dit.exe') {
