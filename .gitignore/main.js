@@ -105,7 +105,7 @@ bot.on('message', function (message) {
     }
 })
 
-module.export.run = async (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
 
   //!clear 15
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("**Tu n'a pas la permission.**")
