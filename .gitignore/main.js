@@ -105,6 +105,16 @@ bot.on('message', function (message) {
     }
 })
 
+module.export.run = async (bot, message, args) => {
+
+  //!clear 15
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("**Tu n'a pas la permission.**")
+  if(!args[0]) return message.channel.send("**oof**");
+  message.channel.bulkDelete(args[0]).then(() => {
+    message.channel.send(`**J'ai supprimé ${args[0]} message**`).then(msg => msg.delete(5000));
+  });
+} 
+
 bot.login(process.env.TOKEN)
 
 
