@@ -116,6 +116,24 @@ bot.on('message', function (message) {
     }
 })
 
+bot.on('message', function (message) {
+    if (message.content === 'H84484848') {
+        let uEmbed = new Discord.RichEmbed()
+        .setColor('#0099ff')
+	.setTitle('Information')
+	.setDescription('**Bienvenue sur Roblox Roleplay France**')
+	.setThumbnail('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
+	.addField('**Reglement**', 'Va le regarder <#614153976526536818>')
+	.addField('Serveur Create', message.guild.createdAt, true)
+	.addField('Roblox Roleplay France by Team Fudriqual', 'Owner : Tuic242, Jeffiste', true)
+	.setImage('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
+	.setTimestamp()
+	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
+	    
+	message.channel.send({embed: uEmbed});
+    }
+})
+
 
 bot.login(process.env.TOKEN)
 
