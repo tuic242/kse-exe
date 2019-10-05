@@ -130,7 +130,7 @@ bot.on('message', function (message) {
         .setURL('https://www.roblox.com/games/2434529364/RP-FR-Ispagnac-V1-2-8')
         .addField('Roblox Groupe', true)
         .setURL('https://www.roblox.com/groups/4036459/RRF-Roblox-Roleplay-France#!/about')
-	.addField('**Propriétaire : Tuic242, Jeffiste**' true)
+	.addField('**Propriétaire : Tuic242, Jeffiste**', true)
 	.setImage('https://cdn.discordapp.com/attachments/613699577664765953/629979994885455872/Screenshot_3_-_Copie.png')
 	.setTimestamp()
 	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
