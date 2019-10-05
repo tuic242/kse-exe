@@ -123,7 +123,7 @@ bot.on('message', function (message) {
 	.setTitle('__**Information, Roblox Roleplay France, Serveur Discord**__')
 	.addField('**Reglement :**', 'Pour le reglement generale : <#614153976526536818>', 'Pour la hiérarchie et les article relatant au serveur Roblox Roleplay France : <#627906211592929330>',  true)  
 	.addField('**Lien :**', '[Roblox Jeux](https://www.roblox.com/games/2434529364/RP-FR-Ispagnac-V1-2-8)', '[Roblox Groupe](https://www.roblox.com/groups/4036459/RRF-Roblox-Roleplay-France#!/about)', true)
-	.addField('**Propriétaire :**, ***Jeffiste***, ***Tuic242***, true)
+	.addField('**Propriétaire :**', '***Jeffiste***', '***Tuic242***', true)
 	.setImage('https://cdn.discordapp.com/attachments/613699577664765953/629979994885455872/Screenshot_3_-_Copie.png')
 	.setTimestamp()
 	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
