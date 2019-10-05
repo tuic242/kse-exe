@@ -124,7 +124,7 @@ bot.on('message', function (message) {
 	.setDescription('**Bienvenue sur Roblox Roleplay France**')
 	.setThumbnail('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
 	.addField('**Reglement**', 'Va le regarder <#614153976526536818>')
-	.addField('Serveur Create', message.guild.createdAt, true)
+	.addField('**Lien**', 'Tu pourra trouver les lien dans <#614155755662344192> ', true)
 	.addField('Roblox Roleplay France by Team Fudriqual', 'Owner : Tuic242, Jeffiste', true)
 	.setImage('https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png')
 	.setTimestamp()
@@ -133,6 +133,8 @@ bot.on('message', function (message) {
 	message.channel.send({embed: uEmbed});
     }
 })
+
+
 
 
 bot.login(process.env.TOKEN)
