@@ -132,6 +132,28 @@ bot.on('message', function (message) {
     }
 })
 
+bot.on('message', function (message) {
+    if (message.content === 'HROLE') {
+        let uEmbed = new Discord.RichEmbed()
+        .setColor('#0099ff')
+	.setTitle('__**Hierachie Serveur Discord**__')
+	.addField('**Propriétaire**', '***Jeffiste, Tuic242***', true)  	 
+	.addField('**Responsable General**', '***OfficerBerreta***', true)
+	.addField('**Equipe de Responsable**', '***Co-Responsable ; Responsable Administration/Moderation***', true)
+        .addField('**Equipe d Administration**', '***Administrateur***', true)
+        .addField('**Equipe de Responsable Metier**', '***Caserne, Brigade, Unite Douanier, Samu, D.I.R***', true)
+        .addField('**Equipe de Moderation**', '***Moderateur***', true)
+        .addField('**Equipe Assistant**', '***Assistant***', true)
+
+	.setImage('https://cdn.discordapp.com/attachments/319151005365305344/632330523645313044/versionSTAFF.png')
+	.setTimestamp()
+	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
+	    
+	message.channel.send({embed: uEmbed});
+    }
+})
+
+
 
 
 
