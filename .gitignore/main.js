@@ -158,6 +158,24 @@ bot.on('message', function (message) {
     }
 })
 
+bot.on('message', function (message) {
+    if (message.content === 'Harticle') {
+        let uEmbed = new Discord.RichEmbed()
+        .setColor('#0099ff')
+	.addField('**Article 1.1**', '***J- Le Responsable peut si il constate "Un évènement engendrant un risque important" ce donner le droit a toutes les permission, les propriétaire pourront a porter un jugement a cette utilisation abusive ou non. Si le responsable est dans l incapacité être présent ou ne répond pas c est le Co-responsable qui peut s accorder c est droit.***', true)
+        .addBlankField()  	 
+	.addField('**Article 1.2**', '***- Une personne possédant le rôle administrateur ou + peut si il constate "Un abus, manque de règlement" retire les fonction d un Gendarme , Sapeurs Pompiers, D.I.R, Douane/Police Municipale, même au chef, les haut staff pourront a porter un jugement a cette utilisation abusive ou non***', true)
+        .addBlankField()
+	.addField('**Article 1.3**', '***- @Responsable General A le droit a accès a tout les métiers si raison valable (pour la propreté il n a pas de rôle pour sont métiers de base comme pour les @Propriétaire   ***', true)
+        .addBlankField()
+        .addField('**Article 8.1**', '***-Le "Plan d urgence" ne peut être activer que par le responsable* il consiste a supprimer a mettre le serveur a quarantaine, fermer la map,mettre en alerte tout les staff ***', true)
+	.setTimestamp()
+	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
+	    
+	message.channel.send({embed: uEmbed});
+    }
+})
+
 
 
 
