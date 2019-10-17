@@ -176,6 +176,40 @@ bot.on('message', function (message) {
     }
 })
 
+bot.on('message', function (message) {
+    if (message.content === 'HJOB') {
+        let uEmbed = new Discord.RichEmbed()
+        .setColor('#0099ff')
+	.setTitle('__**Avoir un metier sur RRF :**__')
+	.addField('**Se rendre dans la categorie pole emplois. Sélectionner le metier souhaiter**', '***(juste en dessous de la categorie "Diffusion"***', true)
+        .addBlankField()  	 
+	.addField('**Cliquer sur l epingle pour voir le modele demander**', '***(Image 1) ***', true)
+        .addBlankField()
+	.addField('**Remplir la fiche**', '***PAS DE MENTION***', true)
+        .addBlankField()
+        .addField('**Attendre**', '***1 semaine maximun***', true)
+        .addBlankField()
+	.setImage('https://cdn.discordapp.com/attachments/625042428285681694/625044671479021608/Screenshot_15.png')
+	.setTimestamp()
+	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
+	    
+	message.channel.send({embed: uEmbed});
+    }
+})
+
+bot.on('message', function (message) {
+    if (message.content === 'HSITE') {
+        let uEmbed = new Discord.RichEmbed()
+        .setColor('#E70606')
+	.setTitle('**[https://robloxroleplayfrance.weebly.com/](https://robloxroleplayfrance.weebly.com/)**')	 
+	.setTimestamp()
+	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
+	    
+	message.channel.send({embed: uEmbed});
+    }
+})
+
+
 
 
 
