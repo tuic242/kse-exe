@@ -224,8 +224,8 @@ bot.on('message', async message => {
                 var mpall = new Discord.RichEmbed()
                 .setThumbnail()
                 .setTimestamp()
-                .setColor("#FFA500")
-                .addField("__**Roblox Roleplay France**__", msge);
+                .setColor('#FFA500')
+                .addField('__**Roblox Roleplay France**__', msge);
                 message.delete()
                 message.guild.members.map(m => m.send(mpall))
             }
