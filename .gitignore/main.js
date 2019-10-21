@@ -3,6 +3,8 @@ const bot = new Discord.Client()
 const express = require('express');
 const app = express();
 
+var prefix = "§"
+
 
 //Debut Parametres Heroku 
 app.set('port',(process.env.PORT || 5000))
@@ -208,6 +210,30 @@ bot.on('message', function (message) {
 	message.channel.send({embed: uEmbed});
     }
 })
+
+bot.on('message', async message => {
+    
+            if(message.content.startsWith(prefix + "p")) {
+ 
+                var args = message.content.split(" ").slice(1);
+                var msge = args.join(' ');
+ 
+                if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
+                if(!msge) return message.channel.send("Precise un message")
+ 
+                var mpall = new Discord.RichEmbed()
+                .setThumbnail()
+                .setTimestamp()
+                .setColor("#FFA500")
+                .addField("__**Roblox Roleplay France**__", msge);
+                message.delete()
+                message.guild.members.map(m => m.send(mpall))
+            }
+
+});
+    
+
+bot.login(process.env.TOKEN)
 
 
 
