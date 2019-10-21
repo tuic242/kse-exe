@@ -23,15 +23,24 @@ bot.on('guildMemberRemove', member => {
     bot.channels.get('613703562060496922').send(`**Aurevoir et bonne chance :) ${member}**`);
 });
 
-bot.on('message', function(message) {
-    if (message.content == "!clear") {
-        if (message.member.hasPermission("MANAGE_MESSAGES")) {
-            message.channel.fetchMessages()
-               .then(function(list){
-                    message.channel.bulkDelete(args[0]);
-                }, function(err){message.channel.send("Error.exe")})                        
-        }
-    }
+bot.on('message', async message => {
+    
+            if(message.content.startsWith(prefix + "p")) {
+ 
+                var args = message.content.split(" ").slice(1);
+                var msge = args.join(' ');
+ 
+                if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
+                if(!msge) return message.channel.send("Precise un message")
+ 
+                var mpall = new Discord.RichEmbed()
+                .setThumbnail()
+                .setTimestamp()
+                .setColor("RANDOM")
+                .addField("RRF Vous annonce :", msge);
+                message.delete()
+                message.guild.members.map(m => m.send(mpall))
+            }
 
 });
 
@@ -211,28 +220,7 @@ bot.on('message', function (message) {
     }
 })
 
-bot.on('message', async message => {
     
-            if(message.content.startsWith(prefix + "p")) {
- 
-                var args = message.content.split(" ").slice(1);
-                var msge = args.join(' ');
- 
-                if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
-                if(!msge) return message.channel.send("Precise un message")
- 
-                var mpall = new Discord.RichEmbed()
-                .setThumbnail()
-                .setTimestamp()
-                .setColor("RANDOM")
-                .addField("**Roblox Roleplay France**", msge);
-                message.delete()
-                message.guild.members.map(m => m.send(mpall))
-            }
-
-});
-    
-
 bot.login(process.env.TOKEN)
 
 
