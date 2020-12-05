@@ -11,7 +11,7 @@ app.set('port',(process.env.PORT || 5000))
 
 bot.on('ready', () => {
 	console.log('Bot Launched..')
-	bot.user.setStatus('Online')
+	bot.user.setStatus('Do not disturb')
         bot.user.setActivity('sa mise a jour en cours', ({type: "WATCHING"}))
 });
 
