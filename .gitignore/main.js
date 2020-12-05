@@ -15,7 +15,7 @@ bot.on('ready', () => {
 	bot.user.setStatus('Online')
         bot.user.setActivity('800 membres', ({type: "WATCHING"}))
 
-    roleClaim(client)
+    roleClaim(bot)
 });
 
 bot.on('guildMemberAdd', member => {
