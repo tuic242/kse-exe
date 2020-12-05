@@ -261,7 +261,7 @@ bot.on('message', message => {
     {
         if(message.embeds)
         {
-            const embedMsg = message.embeds.find(msg => msg.title === "Roles"):
+            const embedMsg = message.embeds.find(msg => msg.title === "Roles");
             if(embedMsg)
             {
                 message.react('🎮')
