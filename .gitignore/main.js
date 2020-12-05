@@ -58,8 +58,14 @@ bot.on('message', function (message) {
 
 
 bot.on('message', function (message) {
-    if (message.content === 'InfoJ.exe') {
-        message.channel.send('***En cours de redaction***')
+    if (message.content === 'REGL5') {
+        const embed = new Discord.RichEmbed()
+        .setTitle("__**Status sur les recrutements metiers en cours :**__")
+        .setColor('#2e1400')
+        .setDescription("👮 **Gendarmerie Nationale =** Recrutement Ouvert \n 🚒 **Sapeurs Pompiers =** Recrutement Ouvert \n 👷**D.I.R =** Recrutement fermé \n \:medical_symbol: **Securite Civile =** Recrtuement Ouvert")
+        .setTimestamp()
+
+        message.channel.send({embed});
     }
 })
 
