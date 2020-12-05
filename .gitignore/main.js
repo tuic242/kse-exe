@@ -12,7 +12,7 @@ app.set('port',(process.env.PORT || 5000))
 bot.on('ready', () => {
 	console.log('Bot Launched..')
 	bot.user.setStatus('Online')
-        bot.user.setGame('Tuic242', 'https://www.twitch.tv/tuic242_')
+        bot.user.setActivity('800 membres', ({type: "WATCHING"}))
 });
 
 bot.on('guildMemberAdd', member => {
@@ -125,7 +125,7 @@ bot.on('message', function (message) {
 bot.on('message', function (message) {
     if (message.content === 'HROLE') {
         const embed = new Discord.RichEmbed()
-        .setTitle("Introduction :")
+        .setTitle("__**Introduction :**__")
         .setColor('#2e1400')
         .setDescription(" Keep Still Entertainment et un serveur créé en 2017 par 6 adolescents passionnés par le roleplay, dans l'objectif d'en faire sur ROBLOX, KSE avec les années évoluera, changera de nom, de map, de maturité. \n\n Aujourd'hui KSE a pour objectif de changer l'image du roleplay francophone sur ROBLOX, mais aussi de développer des serveurs sûrs d'autres jeux (comme sur ARMAIII par exemple), mais aussi de développer et de ce lancer dans des projets de développement et de création jeux vidéo. \n\n __**Le groupe KSE :**__ \n - KSP / Keep Still Production : Studio de developpement des jeux KSE. \n - KSE / Keep Still Entertainment : Editeur et administrateur des production de KSP. \n\n __**Les projets de KSE :**__ \n - LCPD:FR / Map Workshop LCDP:FR / Projet CLOS / ROBLOX \n - ISPAGNAC RP / Maj Maison Ispagnac / Projet en cours archivassions / ROBLOX \n - ISPAGNAC REMAKE / Map Ispagnac modifie / Projet en cours de développement / ROBLOX \n - X / Map Maison PasDeNom / Projet en cours de developpement / ROBLOX \n\n __**Le staff Le staff de KSE est constitué de 4 grades :**__ \n - Administrateur : Personne ayant soit fonde le serveur ou ayant récolté la plus haute confiance des fondateurs et ayant travaillé dur pour le serveur. \n - Modérateur : Personne ayant la mission et tous les pouvoirs dans objectif de faire respecter les règles générales de KSE mais aussi en fonction des jeux d'affection \n - Equipe de développement : Personne étant membre du studio de développement KSP")
         .setThumbnail("https://yagami.xyz/content/uploads/2018/11/discord-512-1.png")
