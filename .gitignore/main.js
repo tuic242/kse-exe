@@ -265,7 +265,7 @@ bot.on('message', message => {
             if(embedMsg)
             {
                 message.react('🎮')
-                .then(reaction => react.message.react('🔴'))
+                .then(reaction => reaction.message.react('🔴'))
                 .then(reaction => reaction.message.delete(5000))
                 .then(msg => console.log("Delete Message"))
                 .catch(err => console.error);
