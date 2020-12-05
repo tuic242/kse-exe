@@ -136,11 +136,63 @@ bot.on('message', function (message) {
 })
 
 bot.on('message', function (message) {
-    if (message.content === 'REGL') {
+    if (message.content === 'REGL1') {
         const embed = new Discord.RichEmbed()
         .setTitle("__**Reglement :**__")
         .setColor('#2e1400')
-        .setDescription("__**Règlement ROBLOX :**__ \n\n Article 1.1 : Le Hors RolePlay, qui consiste à faire des actions qui ne pourraient être réalisé dans la vraie vie, est interdit et sanctionnable. \n\n Article 1.2 :Tout troll, freekill pourra être passible d’un bannissement permanant. \n\n Article 1.4 : Le Meta Gaming, qui consiste à de savoir quelque chose qu'il est impossible de savoir dans votre roleplay, est interdit et sanctionnable. \n\n Article 1.5 : Le vol de véhicule de métier est interdit et sanctionnable. \n\n Article 1.6 : Les attaques envers la brigade de la gendarmerie ou la caserne des sapeurs-pompiers sont interdites et sanctionnables. \n\n Article 1.7 : Le no fear role play, tel qu'ignorer la menace d'une arme quelle soit létale ou non, est absolument interdit et sanctionnable. \n\n Article 1.8 : Quitter pendant une action RolePlay, sauf raison valable ou crash, est interdit et sanctionnable. \n\n Article 1.9 : Tous reset/déconnexion lors d'une interpellation d'un staff est interdit et sanctionnable d'un bannissement permanent. \n\n Article 1.10 : Conduire hors des routes est interdit et sanctionnable. \n\n Article 1.11 : Deux zones sont classées militaire : la caserne des sapeurs-pompier et la brigade de gendarmerie, sauf l'accueil. \n\n Article 1.12 : Un gendarme/pompier est sanctionnable de la même façon qu’un civil avec en plus des sanction interne. \n\n Article 1.13 : Tirer depuis son véhicule est interdit et sanctionnable. \n\n Article 1.14 : Si vous faites un accident, laisser votre véhicule avancer seul ! Et appeler les Pompier, en hors RolePlay uniquement si personne ne l'as fais après 2 minutes. \n\n Article 1.15 : Le règlement de ROBLOX s’applique a KSE. __**Règlement Discord :**__ \n\n Article 2.1 : Votre pseudo doit absolument être en caractères alphanumérique, alphabet latin sous peine d'avertissement. \n\n Article 2.2 : Le harcèlement et la discrimination sont absolument interdits et sanctionnables d'un bannissement. \n\n Article 2.3 : Les images ou vidéos à caractère pornographique sont interdites et sanctionnables d'un bannissement. \n\n Article 2.4 : Les insulte sont interdites et sanctionnables. \n\n Article 2.5 : Tout ce qui peut être sanctionnable par la loi de notre nation, la République Française, est bannissable ici. \n\n Article 2.6 : Les doubles comptes sont interdits et sanctionnables. \n\n Article 2.7 : Toute publicité sur KSE qu'elle soit directe ou indirecte, ce qui consiste en une publicté envoyé en privé a nos joueurs ou le fait de mettre un crédit sur une photo ou de mettre le nom d’un serveur et un lien d’invitation en statut est une publicité, est interdite et sanctionnable voir bannissable. \n\n Article 2.8 : Le règlement de Discord s’applique a KSE. \n\n Article 2.9 : Il est interdit de parler de politique ou de religion sur KSE, KSP ainsi que leurs annexes. \n\n Article 2.10 : Toutes personne envoyant des pub en MP (sauf si la personne et ou était ami avec l'auteur) serrât BAN permanant du serveur et pourra être aussi ban sur d'autre serveur. Je ne rigole plus. Les cancer n'ont pas a être membre de la communauté robloxienne. \n\n __**Règlement Métier :**__ \n\n Article 3.1 : Aucun chef métier ne doit compromettre l’intégrité de Keep Still Entertainment sous peine de révocation immédiate. \n\n Article 3.2 : Pour rejoindre un métier merci de vous dirigez vers les salons de recrutement. \n\n Article 3.3 : Avant de quitter un métier vous devez en informer votre chef ou état major sous peine de sanction. \n\n Article 3.4 : Apres concertation avec le @Conseil d'administration et l'état major concerné un membre d'un métier peut être de promue ou promue. \n\n Article 3.5 : Le chef métier a des responsabilité dans la vie commune du serveur. \n\n __**Les Amendements :**__ \n Amendement 1 : Keep Still Entertainment appartient a 50% a @M.leMaire Jeff Iste et 50% @Tuic242_ \n Amendement 2 : Le @Conseil d'administration a était crée dans l'objectif d'aiguiller les choix des propriétaires \n Amendement 3 : Le conseil administration et uniquement lui peut effectuer des sanction/action qui ne figure pas dans le règlement. \n Amendement 4 : Keep Still Entertainment contient uniquement deux rôles dans l'administration : @Administrateur et @Modérateur \n Amendement 5 : Il est interdit de parler de politique ou de religion sur KSE, KSP ainsi que leurs annexes. \n Amendement 6 : Tout ce qui peut être sanctionnable par la loi de notre nation, la République Française, est bannissable ici.")
+        .setDescription("***Voici le relgement de KSE***")
+        .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
+        .setTimestamp()
+
+        message.channel.send({embed});
+    }
+})
+
+bot.on('message', function (message) {
+    if (message.content === 'REGL2') {
+        const embed = new Discord.RichEmbed()
+        .setTitle("__**Reglement ROBLOX :**__")
+        .setColor('#2e1400')
+        .setDescription("\n\n Article 1.1 : Le Hors RolePlay, qui consiste à faire des actions qui ne pourraient être réalisé dans la vraie vie, est interdit et sanctionnable. \n\n Article 1.2 :Tout troll, freekill pourra être passible d’un bannissement permanant. \n\n Article 1.4 : Le Meta Gaming, qui consiste à de savoir quelque chose qu'il est impossible de savoir dans votre roleplay, est interdit et sanctionnable. \n\n Article 1.5 : Le vol de véhicule de métier est interdit et sanctionnable. \n\n Article 1.6 : Les attaques envers la brigade de la gendarmerie ou la caserne des sapeurs-pompiers sont interdites et sanctionnables. \n\n Article 1.7 : Le no fear role play, tel qu'ignorer la menace d'une arme quelle soit létale ou non, est absolument interdit et sanctionnable. \n\n Article 1.8 : Quitter pendant une action RolePlay, sauf raison valable ou crash, est interdit et sanctionnable. \n\n Article 1.9 : Tous reset/déconnexion lors d'une interpellation d'un staff est interdit et sanctionnable d'un bannissement permanent. \n\n Article 1.10 : Conduire hors des routes est interdit et sanctionnable. \n\n Article 1.11 : Deux zones sont classées militaire : la caserne des sapeurs-pompier et la brigade de gendarmerie, sauf l'accueil. \n\n Article 1.12 : Un gendarme/pompier est sanctionnable de la même façon qu’un civil avec en plus des sanction interne. \n\n Article 1.13 : Tirer depuis son véhicule est interdit et sanctionnable. \n\n Article 1.14 : Si vous faites un accident, laisser votre véhicule avancer seul ! Et appeler les Pompier, en hors RolePlay uniquement si personne ne l'as fais après 2 minutes. \n\n Article 1.15 : Le règlement de ROBLOX s’applique a KSE.")
+        .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
+        .setTimestamp()
+
+        message.channel.send({embed});
+    }
+})
+
+bot.on('message', function (message) {
+    if (message.content === 'REGL3') {
+        const embed = new Discord.RichEmbed()
+        .setTitle("__**Reglement DISCORD :**__")
+        .setColor('#2e1400')
+        .setDescription("\n\n Article 2.1 : Votre pseudo doit absolument être en caractères alphanumérique, alphabet latin sous peine d'avertissement. \n\n Article 2.2 : Le harcèlement et la discrimination sont absolument interdits et sanctionnables d'un bannissement. \n\n Article 2.3 : Les images ou vidéos à caractère pornographique sont interdites et sanctionnables d'un bannissement. \n\n Article 2.4 : Les insulte sont interdites et sanctionnables. \n\n Article 2.5 : Tout ce qui peut être sanctionnable par la loi de notre nation, la République Française, est bannissable ici. \n\n Article 2.6 : Les doubles comptes sont interdits et sanctionnables. \n\n Article 2.7 : Toute publicité sur KSE qu'elle soit directe ou indirecte, ce qui consiste en une publicté envoyé en privé a nos joueurs ou le fait de mettre un crédit sur une photo ou de mettre le nom d’un serveur et un lien d’invitation en statut est une publicité, est interdite et sanctionnable voir bannissable. \n\n Article 2.8 : Le règlement de Discord s’applique a KSE. \n\n Article 2.9 : Il est interdit de parler de politique ou de religion sur KSE, KSP ainsi que leurs annexes. \n\n Article 2.10 : Toutes personne envoyant des pub en MP (sauf si la personne et ou était ami avec l'auteur) serrât BAN permanant du serveur et pourra être aussi ban sur d'autre serveur. Je ne rigole plus. Les cancer n'ont pas a être membre de la communauté robloxienne.")
+        .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
+        .setTimestamp()
+
+        message.channel.send({embed});
+    }
+})
+
+bot.on('message', function (message) {
+    if (message.content === 'REGL4') {
+        const embed = new Discord.RichEmbed()
+        .setTitle("__**Reglement METIERS :**__")
+        .setColor('#2e1400')
+        .setDescription("\n\n Article 3.1 : Aucun chef métier ne doit compromettre l’intégrité de Keep Still Entertainment sous peine de révocation immédiate. \n\n Article 3.2 : Pour rejoindre un métier merci de vous dirigez vers les salons de recrutement. \n\n Article 3.3 : Avant de quitter un métier vous devez en informer votre chef ou état major sous peine de sanction. \n\n Article 3.4 : Apres concertation avec le @Conseil d'administration et l'état major concerné un membre d'un métier peut être de promue ou promue. \n\n Article 3.5 : Le chef métier a des responsabilité dans la vie commune du serveur.")
+        .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
+        .setTimestamp()
+
+        message.channel.send({embed});
+    }
+})
+
+bot.on('message', function (message) {
+    if (message.content === 'REGL5') {
+        const embed = new Discord.RichEmbed()
+        .setTitle("__**Amendements :**__")
+        .setColor('#2e1400')
+        .setDescription("Amendement 1 : Keep Still Entertainment appartient a 50% a @M.leMaire Jeff Iste et 50% @Tuic242_ \n Amendement 2 : Le @Conseil d'administration a était crée dans l'objectif d'aiguiller les choix des propriétaires \n Amendement 3 : Le conseil administration et uniquement lui peut effectuer des sanction/action qui ne figure pas dans le règlement. \n Amendement 4 : Keep Still Entertainment contient uniquement deux rôles dans l'administration : @Administrateur et @Modérateur \n Amendement 5 : Il est interdit de parler de politique ou de religion sur KSE, KSP ainsi que leurs annexes. \n Amendement 6 : Tout ce qui peut être sanctionnable par la loi de notre nation, la République Française, est bannissable ici.")
         .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
         .setTimestamp()
 
