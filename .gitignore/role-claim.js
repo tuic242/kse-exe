@@ -1,8 +1,8 @@
 const firstMessage = require('./first-message')
 
-module.exports = (client) => {
+module.exports = (bot) => {
     const channelId = '696684380374171740'
 
-    firstMessage(client, channelId, 'hello', [])
+    firstMessage(bot, channelId, 'hello', [])
 
 }
