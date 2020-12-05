@@ -194,6 +194,18 @@ bot.on('message', function (message) {
 })
 
 bot.on('message', function (message) {
+    if (message.content === 'SERVOFF') {
+        const embed = new Discord.RichEmbed()
+        .setTitle("__**Status Serveur ROBLOX :**__")
+        .setColor('#2e1400')
+        .setDescription(":Probleme: Le serveur est actuellement Offline")
+        .setTimestamp()
+
+        message.channel.send({embed});
+    }
+})
+
+bot.on('message', function (message) {
     if (message.content === 'Harticle') {
         let uEmbed = new Discord.RichEmbed()
         .setColor('#0099ff')
