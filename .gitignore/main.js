@@ -45,12 +45,6 @@ bot.on('message', async message => {
 });
 
 bot.on('message', function (message) {
-    if (message.content === 'Dit.exe') {
-        message.channel.send('**Tu te souviens de cette commande c est bien mais je suis maintenant fonctionnelle alors utilise Help.exe**')
-    }
-})
-
-bot.on('message', function (message) {
     if (message.content === 'Help.exe') {
         message.channel.send('***Rappelle : Je suis en développement*** \n**Mais commande grand public : ** \n**[InfoJ.exe] Cette commande permet de connaitre le statut des métiers (Si il son ouvert ou fermer) ** \n**[S2.exe] Pas besoin de l’expliquer…….. ** \n \n**Mais commande spécial ** \n**[HelpJ.exe] Cette commande est réserver uniquement au chef métier si une personne vient a \nl’utiliser autre, elle pourrait se voir averti**')
     }
@@ -127,45 +121,17 @@ bot.on('message', function (message) {
     }
 })
 
-bot.on('message', function (message) {
-    if (message.content === 'H84484848') {
-        let uEmbed = new Discord.RichEmbed()
-        .setColor('#0099ff')
-	.setTitle('__**Information Serveur Discord**__')
-	.addField('**Reglement :**', '***Pour le reglement generale : <#614153976526536818>; Hiérarchie / Article  : <#627906211592929330>***', true)  	 
-	.addField('**Lien :**', '[Roblox Jeux](https://www.roblox.com/games/2434529364/RP-FR-Ispagnac-V1-2-8) ; [Roblox Groupe](https://www.roblox.com/groups/4036459/RRF-Roblox-Roleplay-France#!/about)', true)
-	.addField('**Propriétaire :**', '***Jeffiste, Tuic242***', true)
-	.setImage('https://cdn.discordapp.com/attachments/613699577664765953/629979994885455872/Screenshot_3_-_Copie.png')
-	.setTimestamp()
-	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
-	    
-	message.channel.send({embed: uEmbed});
-    }
-})
 
 bot.on('message', function (message) {
     if (message.content === 'HROLE') {
-        let uEmbed = new Discord.RichEmbed()
-        .setColor('#0099ff')
-	.setTitle('__**Hierachie Serveur Discord**__')
-	.addField('**Propriétaire**', '***Jeffiste, Tuic242***', true)
-        .addBlankField()  	 
-	.addField('**Responsable General**', '***OfficerBerreta***', true)
-        .addBlankField()
-	.addField('**Equipe de Responsable**', '***Co-Responsable ; Responsable Administration/Moderation***', true)
-        .addBlankField()
-        .addField('**Equipe d Administration**', '***Administrateur***', true)
-        .addBlankField()
-        .addField('**Equipe de Responsable Metier**', '***Caserne, Brigade, Unite Douanier, Samu, D.I.R***', true)
-        .addBlankField()
-        .addField('**Equipe de Moderation**', '***Moderateur***', true)
-        .addBlankField()
-        .addField('**Equipe Assistant**', '***Assistant***', true)
-	.setImage('https://cdn.discordapp.com/attachments/319151005365305344/632330523645313044/versionSTAFF.png')
-	.setTimestamp()
-	.setFooter('Roblox Roleplay France (RRF)', 'https://cdn.discordapp.com/attachments/614152106777247774/614152729132138526/2019-07-14_15.19.35.png');
-	    
-	message.channel.send({embed: uEmbed});
+        const embed = new Discord.RichEmbed()
+        .setTitle("Introduction :")
+        .setColor('#2e1400')
+        .setDescription(" Keep Still Entertainment et un serveur créé en 2017 par 6 adolescents passionnés par le roleplay, dans l'objectif d'en faire sur ROBLOX, KSE avec les années évoluera, changera de nom, de map, de maturité. \n Aujourd'hui KSE a pour objectif de changer l'image du roleplay francophone sur ROBLOX, mais aussi de développer des serveurs sûrs d'autres jeux (comme sur ARMAIII par exemple), mais aussi de développer et de ce lancer dans des projets de développement et de création jeux vidéo. \n Le groupe KSE : \n - KSP / Keep Still Production : Studio de developpement des jeux KSE. \n - KSE / Keep Still Entertainment : Editeur et administrateur des production de KSP. \n Les projets de KSE : \n - LCPD:FR / Map Workshop LCDP:FR / Projet CLOS / ROBLOX \n - ISPAGNAC RP / Maj Maison Ispagnac / Projet en cours archivassions / ROBLOX \n - ISPAGNAC REMAKE / Map Ispagnac modifie / Projet en cours de développement / ROBLOX \n - X / Map Maison PasDeNom / Projet en cours de developpement / ROBLOX \n Le staff Le staff de KSE est constitué de 4 grades : \n - Administrateur : Personne ayant soit fonde le serveur ou ayant récolté la plus haute confiance des fondateurs et ayant travaillé dur pour le serveur. \n - Modérateur : Personne ayant la mission et tous les pouvoirs dans objectif de faire respecter les règles générales de KSE mais aussi en fonction des jeux d'affection \n - Equipe de développement : Personne étant membre du studio de développement KSP")
+        .setThumbnail("https://yagami.xyz/content/uploads/2018/11/discord-512-1.png")
+        .setTimestamp()
+
+        message.channel.send({embed});
     }
 })
 
