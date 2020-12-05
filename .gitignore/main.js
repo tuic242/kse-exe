@@ -59,7 +59,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'InfoJ.exe') {
-        const embed = new Client.RichEmbed()
+        const embed = new Client.RichEmbed();
         .setTitle("__**Status sur les recrutements metiers en cours :**__")
         .setColor('#2e1400')
         .setDescription("👮 **Gendarmerie Nationale =** Recrutement Ouvert \n 🚒 **Sapeurs Pompiers =** Recrutement Ouvert \n 👷**D.I.R =** Recrutement fermé \n \:medical_symbol: **Securite Civile =** Recrtuement Ouvert")
