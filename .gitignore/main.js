@@ -58,7 +58,7 @@ bot.on('message', function (message) {
 
 
 bot.on('message', function (message) {
-    if (message.content === 'REGL5') {
+    if (message.content === 'InfoJ.exe') {
         const embed = new Discord.RichEmbed()
         .setTitle("__**Status sur les recrutements metiers en cours :**__")
         .setColor('#2e1400')
