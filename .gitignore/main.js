@@ -1,5 +1,5 @@
-const Discord = require('discord.js');
-const bot = new Discord();
+const { Client, RichEmbed } = require('discord.js');
+const bot = new Client();
 const express = require('express');
 const app = express();
 
@@ -255,6 +255,8 @@ bot.on('message', function (message) {
 	message.channel.send({embed: uEmbed});
     }
 })
+
+bot
 
 
 bot.login(process.env.TOKEN)
