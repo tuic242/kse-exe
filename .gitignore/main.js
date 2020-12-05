@@ -9,11 +9,11 @@ var prefix = "§"
 //Debut Parametres Heroku 
 app.set('port',(process.env.PORT || 5000))
 
-
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: '[Help.exe]', type: 0}});
-    console.log("Bot Ready !");
-})
+	console.log('Bot Launched..')
+	bot.user.setStatus('Online')
+        bot.user.setGame('KSE')
+});
 
 bot.on('guildMemberAdd', member => {
     bot.channels.get('613703562060496922').send(`**Bienvenue à toi, bon roleplay ${member}**`);
