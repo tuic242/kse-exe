@@ -12,7 +12,7 @@ app.set('port',(process.env.PORT || 5000))
 bot.on('ready', () => {
 	console.log('Bot Launched..')
 	bot.user.setStatus('Online')
-        bot.user.setActivity('800 membres', ({type: "WATCHING"}))
+        bot.user.setActivity('sa mise a jour en cours', ({type: "WATCHING"}))
 });
 
 bot.on('guildMemberAdd', member => {
@@ -46,33 +46,23 @@ bot.on('message', async message => {
 
 bot.on('message', function (message) {
     if (message.content === 'Help.exe') {
-        message.channel.send('***Rappelle : Je suis en développement*** \n**Mais commande grand public : ** \n**[InfoJ.exe] Cette commande permet de connaitre le statut des métiers (Si il son ouvert ou fermer) ** \n**[S2.exe] Pas besoin de l’expliquer…….. ** \n \n**Mais commande spécial ** \n**[HelpJ.exe] Cette commande est réserver uniquement au chef métier si une personne vient a \nl’utiliser autre, elle pourrait se voir averti**')
+        message.channel.send('***En cours de redaction***')
     }
 })
 
 bot.on('message', function (message) {
     if (message.content === 'HelpJ.exe') {
-        message.channel.send(':warning:__**SEULE LES CHEFS METIERS PEUVENT UTILISER C’EST COMMANDE**__:warning: \n** Voici les commandes chefs métiers : ** \n**[AccepteGN.exe]** \n**[AccepteSP.exe]** \n**[AccepteDN.exe]** \n**[AccepteDIR.exe]** \n**[RefuserDIR.exe]** \n**[RefuserDN.exe]** \n**[RefuserSP.exe]** \n**[RefuserGN.exe]**')
+        message.channel.send('***En cours de redaction***')
     }
 })
 
-bot.on('message', function (message) {
-    if (message.content === 'Test1.exe') {
-        message.channel.send('`Test1.exe Mise a jour bien intégrer`')
-    }
-})
 
 bot.on('message', function (message) {
     if (message.content === 'InfoJ.exe') {
-        message.channel.send('**Voici les statut des recrutement de tout les metier : ** \n:cop: **Gendarme : `Close #recrutement-gn`** \n:fire_engine: **Sapeurs Pompiers : `Open #recrutement_sp`** \n:customs: **Douane : `Open #recrutement-dn` ** \n:construction_worker: **Dir : `Open #recrutement-dir`**')
+        message.channel.send('***En cours de redaction***')
     }
 })
 
-bot.on('message', function (message) {
-    if (message.content === 'S3.exe') {
-        message.channel.send('**404**')
-    }
-})
 
 ///Commande Metiers
 ///Partie Accepte
