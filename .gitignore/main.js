@@ -265,8 +265,9 @@ bot.on('message', message => {
     if(message.content.toLowerCase() === '?roles')
     {
         const embed = new RichEmbed();
-        embed.setTitle("Server Rules")
+        embed.setTitle("Roles")
         embed.setColor("BLUE");
+        embed.setDescription("Clique sur 🎮 pour savoir quand une session mini jeux se deroulera. \n\n Clique sur 🔴 pour etre tenue au courant des streams.")
         message.channel.send(embed);
     }
 })
