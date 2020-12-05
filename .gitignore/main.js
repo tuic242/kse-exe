@@ -1,8 +1,7 @@
-const Discord = require('discord.js')
-const bot = new Discord.Client()
+const Discord = require('discord.js');
+const bot = new Discord();
 const express = require('express');
 const app = express();
-const roleClaim = require('./role-claim')
 
 var prefix = "§"
 
@@ -14,8 +13,6 @@ bot.on('ready', () => {
 	console.log('Bot Launched..')
 	bot.user.setStatus('Online')
         bot.user.setActivity('800 membres', ({type: "WATCHING"}))
-
-    roleClaim(bot)
 });
 
 bot.on('guildMemberAdd', member => {
@@ -49,7 +46,7 @@ bot.on('message', async message => {
 
 bot.on('message', function (message) {
     if (message.content === 'Help.exe') {
-        message.channel.send('***En cours de redaction.. ***')
+        message.channel.send('***Rappelle : Je suis en développement*** \n**Mais commande grand public : ** \n**[InfoJ.exe] Cette commande permet de connaitre le statut des métiers (Si il son ouvert ou fermer) ** \n**[S2.exe] Pas besoin de l’expliquer…….. ** \n \n**Mais commande spécial ** \n**[HelpJ.exe] Cette commande est réserver uniquement au chef métier si une personne vient a \nl’utiliser autre, elle pourrait se voir averti**')
     }
 })
 
@@ -258,13 +255,6 @@ bot.on('message', function (message) {
 	message.channel.send({embed: uEmbed});
     }
 })
-
-    
-bot.login(process.env.TOKEN)
-
-
-
-
 
 
 bot.login(process.env.TOKEN)
