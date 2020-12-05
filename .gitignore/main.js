@@ -256,7 +256,20 @@ bot.on('message', function (message) {
     }
 })
 
-bot
+bot.on('message', message => {
+    if(message.author.bot)
+    {
+        return;
+    }
+
+    if(message.content.toLowerCase() === '?roles')
+    {
+        const embed = new RichEmbed();
+        embed.setTitle("Server Rules")
+        embed.setColor("BLUE");
+        message.channel.send(embed);
+    }
+})
 
 
 bot.login(process.env.TOKEN)
