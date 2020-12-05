@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 const express = require('express');
 const app = express();
+const roleClaim = require('./role-claim')
 
 var prefix = "§"
 
@@ -13,6 +14,8 @@ bot.on('ready', () => {
 	console.log('Bot Launched..')
 	bot.user.setStatus('Online')
         bot.user.setActivity('800 membres', ({type: "WATCHING"}))
+
+    roleClaim(client)
 });
 
 bot.on('guildMemberAdd', member => {
@@ -256,33 +259,6 @@ bot.on('message', function (message) {
     }
 })
 
-
-const firstMessage = require('./first-message')
-
-module.exports = (client) => {
-    const channelId = '696684380374171740'
-
-    const getEmoji = (emojiName) => 
-      client.emojis.cache.find((emoji) => emoji.name === emojiname)
-
-    const emojis = {
-        NotificationMiniJeux: 'video_game',
-        NotificationStream: 'red_circle',
-    }
-
-    const reaction = []
-
-    let emojitext = 'Clique sur une des réactions pour avoir le rôle que tu veux. \n\n'
-    for (const key in emojis) {
-        const emoji = getEmoji(key)
-        reaction.push(emoji)
-
-        const role = emoji[key]
-        emojiText += `${emoji} = ${role}\n`
-    }
-
-    firstMessage(client, channelId, emojitext, [])
-}
     
 bot.login(process.env.TOKEN)
 
