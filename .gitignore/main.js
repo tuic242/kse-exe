@@ -12,7 +12,7 @@ app.set('port',(process.env.PORT || 5000))
 bot.on('ready', () => {
 	console.log('Bot Launched..')
 	bot.user.setStatus('Online')
-        bot.user.setGame('KSE')
+        bot.user.setActivity('800 membres', ({type: "WATCHING"}))
 });
 
 bot.on('guildMemberAdd', member => {
@@ -34,10 +34,10 @@ bot.on('message', async message => {
                 if(!msge) return message.channel.send("Precise un message")
  
                 var mpall = new Discord.RichEmbed()
-                .setThumbnail()
+                .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
                 .setTimestamp()
                 .setColor("RANDOM")
-                .addField("RRF Vous annonce :", msge);
+                .addField("Keep Still Entertainment :", msge);
                 message.delete()
                 message.guild.members.map(m => m.send(mpall))
             }
