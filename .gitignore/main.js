@@ -62,7 +62,7 @@ bot.on('message', function (message) {
         const embed = new RichEmbed()
         .setTitle("__**Status sur les recrutements metiers en cours :**__")
         .setColor('#2e1400')
-        .setDescription("👮 **Gendarmerie Nationale =** Recrutement Ouvert \n 🚒 **Sapeurs Pompiers =** Recrutement Ouvert \n 👷**D.I.R =** Recrutement fermé \n \:medical_symbol: **Securite Civile =** Recrutement Ouvert")
+        .setDescription("👮 **Gendarmerie Nationale =** Recrutement Ouvert \n 🚒 **Sapeurs Pompiers =** Recrutement Ouvert \n 👷**D.I.R =** Recrutement fermé \n \:helicopter: **Securite Civile =** Recrutement Ouvert")
         .setTimestamp()
 
         message.channel.send({embed});
