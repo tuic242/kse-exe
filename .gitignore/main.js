@@ -74,7 +74,7 @@ bot.on('message', function (message) {
 bot.on('message', function (message) {
     if (message.content === 'LolExe') {
         message.channel.send(':wave: **Bonjour** :wave: ')
-	    message.react('😀😃😄😁😆😅🤣😂🙂🙃😉😊😇🥰🥰😍🤩😘😗☺️😚😙🥲😋🤮🥵🤯🥳😈😓✋🏼✋🏽🖖💬👋👎🏿👆🏿👍🏽👱🏽👱🏿🧑🏽👶🏼👩🏼‍🦲🙎🏾‍♂️👨🏿‍🌾👩🏽‍🏭👨🏽‍🔧👨🏽‍🌾👩🏽‍🤝‍👨🏾👩🏻‍🤝‍👩🏾👨‍👨‍👦‍👦🕊️🐠🐚🏤🚢🧾🔽')
+	    message.react('\:grinning: \:smiley: \:TuVeuxTeBattre: \<:Reset:622741806190166026> \:YesChat: \:BAN: \:HA: \:Dossier:')
     }
 })
 
