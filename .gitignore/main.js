@@ -72,9 +72,9 @@ bot.on('message', function (message) {
 
 
 bot.on('message', function (message) {
-    if (message.content === 'Dit bonjour') {
+    if (message.content === 'LolExe') {
         message.channel.send(':wave: **Bonjour** :wave: ')
-	    message.react('👋')
+	    message.react('😀😃😄😁😆😅🤣😂🙂🙃😉😊😇🥰🥰😍🤩😘😗☺️😚😙🥲😋🤮🥵🤯🥳😈😓✋🏼✋🏽🖖💬👋👎🏿👆🏿👍🏽👱🏽👱🏿🧑🏽👶🏼👩🏼‍🦲🙎🏾‍♂️👨🏿‍🌾👩🏽‍🏭👨🏽‍🔧👨🏽‍🌾👩🏽‍🤝‍👨🏾👩🏻‍🤝‍👩🏾👨‍👨‍👦‍👦🕊️🐠🐚🏤🚢🧾🔽')
     }
 })
 
