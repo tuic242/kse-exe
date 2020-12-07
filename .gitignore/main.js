@@ -71,6 +71,12 @@ bot.on('message', function (message) {
 })
 
 
+bot.on('message', function (message) {
+    if (message.content === 'Dit bonjour') {
+        message.channel.send(':wave: **Bonjour** :wave: ')
+    }
+})
+
 ///Commande Metiers
 ///Partie Accepte
 
