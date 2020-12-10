@@ -82,7 +82,7 @@ bot.on('message', function (message) {
 
 bot.on('message', function (message) {
     if (message.content === 'AccepteGN.exe') {
-        if(!message.guild.member(message.author).role("Modertateur")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
+        if(!message.guild.member(message.author).roles("Modertateur")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
         message.channel.send('**Les chefs metiers de la Gendarmerie Nationale on accepeter ta candidature. Bienvenu dans ton nouveaux metier** \n**https://discord.gg/kpNV3YZ**')
     }
 })
