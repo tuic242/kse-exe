@@ -13,7 +13,7 @@ app.set('port',(process.env.PORT || 5000))
 bot.on('ready', () => {
 	console.log('Bot Launched..')
 	bot.user.setStatus('Do not disturb')
-        bot.user.setActivity('sa mise a jour en cours', ({type: "WATCHING"}))
+        bot.user.setActivity('800 membres', ({type: "WATCHING"}))
 });
 
 bot.on('guildMemberAdd', member => {
@@ -81,7 +81,7 @@ bot.on('message', function (message) {
 ///Partie Accepte
 
 bot.on('message', function (message) {
-    if (message.content === 'AccepteGN.exe') {
+    if (message.content === 'AccepteGN.exe') and (!message.guild.member(message.author).roles("Moderateur")); {
         message.channel.send('**Les chefs metiers de la Gendarmerie Nationale on accepeter ta candidature. Bienvenu dans ton nouveaux metier** \n**https://discord.gg/kpNV3YZ**')
     }
 })
@@ -289,6 +289,3 @@ bot.on('message', message => {
 
 
 bot.login(process.env.TOKEN)
-
-
-
