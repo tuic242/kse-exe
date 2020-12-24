@@ -165,7 +165,7 @@ bot.on('message', function (message) {
         const embed = new Discord.RichEmbed()
         .setTitle("__**Status Serveur ROBLOX :**__")
         .setColor('#FF360B')
-        .setDescription("\:MajNon: Le serveur est actuellement Offline")
+        .setDescription(" \:MajNon: Le serveur est actuellement Offline")
         .setTimestamp()
 
         message.channel.send({embed});
