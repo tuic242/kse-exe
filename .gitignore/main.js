@@ -87,43 +87,6 @@ bot.on('message', function (message) {
     }
 })
 
-bot.on('message', function (message) {
-    if (message.content === 'AccepteSP.exe') {
-        message.channel.send('**Les chefs metiers des Sapeurs Pompiers on accepeter ta candidature. Bienvenu dans ton nouveaux metier** \n**https://discord.gg/w8jPCNc**')
-    }
-})
-
-bot.on('message', function (message) {
-    if (message.content === 'AccepteDN.exe') {
-        message.channel.send('**Les chefs metiers de la Douane on accepeter ta candidature. Bienvenu dans ton nouveaux metier** \n**https://discord.gg/6SE6Es9**')
-    }
-})
-
-bot.on('message', function (message) {
-    if (message.content === 'AccepteDIR.exe') {
-        message.channel.send('**Les chefs metiers de la DIR on accepeter ta candidature. Bienvenu dans ton nouveaux metier** \n**https://discord.gg/Va4MgXt**')
-    }
-})
-
-///Partie Refuser
-
-bot.on('message', function (message) {
-    if (message.content === 'RefuserDIR.exe') {
-        message.channel.send('**Les chefs métiers de la DIR on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
-    }
-})
-
-bot.on('message', function (message) {
-    if (message.content === 'RefuserDN.exe') {
-        message.channel.send('**Les chefs métiers de la Douane on malheureusement refuser ta candidature, tu peux demander la raison est essayer d améliore ta candidature pour que la prochaine fois tu sois accepter, courage**')
-    }
-})
-
-bot.on('message', function (message) {
-    if (message.content === 'Aide') {
-        message.channel.send('**<@&438631658196041738> <@&430666903464443904> Merci d aider le joueur**')
-    }
-})
 
 
 bot.on('message', function (message) {
@@ -201,8 +164,8 @@ bot.on('message', function (message) {
     if (message.content === 'SERVOFF') {
         const embed = new Discord.RichEmbed()
         .setTitle("__**Status Serveur ROBLOX :**__")
-        .setColor('#2e1400')
-        .setDescription("Le serveur est actuellement Offline")
+        .setColor('#FF360B')
+        .setDescription("\:MajNon: Le serveur est actuellement Offline")
         .setTimestamp()
 
         message.channel.send({embed});
