@@ -1,5 +1,5 @@
 const { Client, RichEmbed } = require('discord.js');
-const discord = require('discord.js');
+const Discord = require('discord.js');
 const bot = new Client();
 const express = require('express');
 const app = express();
@@ -13,7 +13,7 @@ app.set('port',(process.env.PORT || 5000))
 bot.on('ready', () => {
 	console.log('Bot Launched..')
 	bot.user.setStatus('Do not disturb')
-        bot.user.setActivity('sa mise a jour en cours', ({type: "WATCHING"}))
+        bot.user.setActivity('Joyeux Noel', ({type: "STREAMING"}))
 });
 
 bot.on('guildMemberAdd', member => {
