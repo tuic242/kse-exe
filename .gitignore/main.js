@@ -17,11 +17,11 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberAdd', member => {
-    bot.channels.get('613703562060496922').send(`**Bienvenue à toi, bon roleplay ${member}**`);
+    bot.channels.cache.get('613703562060496922').send(`**Bienvenue à toi, bon roleplay ${member.user.username}**`);
 });
 
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('613703562060496922').send(`**Aurevoir et bonne chance :) ${member}**`);
+    bot.channels.cache.get('613703562060496922').send(`**Aurevoir et bonne chance :) ${member.user.username}**`);
 });
 
 bot.on('message', async message => {
