@@ -17,8 +17,14 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberAdd', member => {
-    bot.channels.cache.get('613703562060496922').send(`**Bienvenue à toi, bon roleplay ${member.user.username}**`);
-});
+    let channelID = '613703562060496922'
+    if(member.guild.id != '354263712430948354') return;
+    let embed = new Discord.MessageEmbed()
+    .setTitle('Frontiere du serveur')
+    .setDescription(`${member.user.tag} Vient de passer la frontiere, bienvenue 👋`)
+    .setColor('#0099ff')
+    channelID.send(embed)
+}) 
 
 bot.on('guildMemberRemove', member => {
     bot.channels.cache.get('613703562060496922').send(`**Aurevoir et bonne chance :) ${member.user.username}**`);
