@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 const express = require('express');
 const app = express();
-const channelId = '613703562060496922'
+const salonw = '613703562060496922'
 const targetChannelId = '719499071668224053'
 
 
@@ -51,7 +51,7 @@ bot.on('guildMemberAdd', (member) => {
         .get(targetChannelId)
         .toString()}`
     
-    const channel = member.guild.channels.cache.get(channelId) 
+    const channel = member.guild.channels.cache.get(salonw) 
     channel.send(message)
 })
 
