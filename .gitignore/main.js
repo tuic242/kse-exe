@@ -48,7 +48,7 @@ bot.on('guildMemberAdd', (member) => {
         member.id
     }> sur Keep Still Entertainment ! Pense a lire le reglement`
     
-    const channel = member.guild.channels.cache.get(salonw)
+    const channel = '613703562060496922'
     channel.send(message)
 })
 
