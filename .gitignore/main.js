@@ -44,12 +44,12 @@ bot.on('message', async message => {
 bot.on('guildMemberAdd', (member) => {
     console.log(member)
 
-    const message = `Bienvenue a toi <@${
+    const messagew = `Bienvenue a toi <@${
         member.id
     }> sur Keep Still Entertainment ! Pense a lire le reglement`
     
     const channel = '613703562060496922'
-    channel.send(message)
+    message.channel.send(messagew)
 })
 
 
