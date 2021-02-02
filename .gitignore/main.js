@@ -1,8 +1,6 @@
 const { Client, RichEmbed } = require('discord.js');
-const Discord = require('discord.js')
+const Discord = require('discord.js');
 const bot = new Discord.Client()
-const salonw = '613703562060496922'
-const reglsalon = '719499071668224053'
 const express = require('express');
 const app = express();
 
