@@ -46,9 +46,7 @@ bot.on('guildMemberAdd', (member) => {
 
     const message = `Bienvenue a toi <@${
         member.id
-    }> sur Keep Still Entertainment ! Pense a lire le reglement ${member.guild.channels.cache
-        .get(reglsalon)
-        .toString()}`
+    }> sur Keep Still Entertainment ! Pense a lire le reglement`
     
     const channel = member.guild.channels.cache.get(salonw)
     channel.send(message)
