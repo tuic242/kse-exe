@@ -51,7 +51,7 @@ bot.on('guildMemberAdd', (member) => {
         .get(targetChannelId)
         .toString()}`
     
-    const channel = member.guild.channels.cache.get(salonw) 
+    const channel = member.guild.channels.cache.get(salonw)
     channel.send(message)
 })
 
