@@ -3,6 +3,9 @@ const Discord = require('discord.js');
 const bot = new Client();
 const express = require('express');
 const app = express();
+const channelId = '613703562060496922'
+const targetChannelId = '719499071668224053'
+
 
 var prefix = "§"
 
@@ -16,19 +19,7 @@ bot.on('ready', () => {
         bot.user.setActivity('ça mise a jour en cours', ({type: "WATCHING"}))
 });
 
-bot.on('guildMemberAdd', member => {
-    let channelID = '613703562060496922'
-    if(member.guild.id != '354263712430948354') return;
-    let embed = new Discord.MessageEmbed()
-    .setTitle('Frontiere du serveur')
-    .setDescription(`${member.user.tag} Vient de passer la frontiere, bienvenue 👋`)
-    .setColor('#0099ff')
-    channelID.send(embed)
-}) 
 
-bot.on('guildMemberRemove', member => {
-    bot.channels.cache.get('613703562060496922').send(`**Aurevoir et bonne chance :) ${member.user.username}**`);
-});
 
 bot.on('message', async message => {
     
@@ -50,6 +41,20 @@ bot.on('message', async message => {
             }
 
 });
+
+bot.on('guildMemberAdd', (member) => {
+    console.log(member)
+
+    const message = `Bienvenue a toi <@${
+        member.id
+    }> sur Keep Still Entertainment ! Pense a lire le reglement ${member.guild.channels.cache
+        .get(targetChannelId)
+        .toString()}`
+    
+    const channel = member.guild.channels.cache.get(channelId) 
+    channel.send(message)
+})
+
 
 bot.on('message', function (message) {
     if (message.content === 'Help.exe') {
