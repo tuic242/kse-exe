@@ -42,9 +42,8 @@ bot.on('message', async message => {
 });
 
 bot.on('guildMemberAdd', (member) => {
-    console.log(member)
-    const channel = '613703562060496922'
-    message.channel.send('***En cours de redaction***')
+    const BienvenuChannel = member.guild.channels.cache.find(channel => channel.name === 'arrivee-depart')
+    BienvenuChannel.send (`Bienvenu ! ${member}`)
 })
 
 
