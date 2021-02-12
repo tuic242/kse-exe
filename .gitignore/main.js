@@ -6,7 +6,6 @@ const fs = require('fs');
 
 const prefix = '!'; //I put ! but it can be what ever you want$
 
-app.set('port',(process.env.PORT || 5000))
 
 client.commands = new Discord.Collection();
 
