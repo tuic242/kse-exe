@@ -3,24 +3,12 @@ const RichEmbed= require('discord.js');
 const bot = new Discord.Client()
 const express = require('express');
 const app = express();
-const welcomeChannel = '613703562060496922'
 
 var prefix = "§"
 
 
 //Debut Parametres Heroku 
 app.set('port',(process.env.PORT || 5000))
-
-bot.on('guildMemberAdd', member => {
-    
-    const channelwelcomeembed = new Discord.MessageEmbed()
-        .setColor('#2e1400')
-        .setTitle("Bienvenue !")
-        .setDescription(`Bonjour ${member} ! N'oublie pas de lire le reglement #reglement et bon jeu.`)
-        .setTimestamp();
-    const channel = member.guild.channels.cache.get(welcomeChannel)
-    channel.send(channelwelcomeembed)
-})
 
 bot.on('message', async message => {
     
