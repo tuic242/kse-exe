@@ -3,6 +3,7 @@ const RichEmbed= require('discord.js');
 const bot = new Discord.Client()
 const express = require('express');
 const app = express();
+const welcomeChannel = '613703562060496922'
 
 var prefix = "§"
 
@@ -17,13 +18,14 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberAdd', member => {
-    const welcomeChannel = member.guild.channels.cache.find(c => c.id == "613703562060496922")
+    
     const channelwelcomeembed = new Discord.MessageEmbed()
         .setColor('#2e1400')
         .setTitle("Bienvenue !")
         .setDescription(`Bonjour ${member} ! N'oublie pas de lire le reglement #reglement et bon jeu.`)
         .setTimestamp();
-    welcomeChannel.send(channelwelcomeembed)
+    const channel = member.guild.channels.cache.get(welcomeChannel)
+    channel.send(channelwelcomeembed)
 })
 
 bot.on('message', async message => {
