@@ -1,17 +1,12 @@
 {
-  "name": "rrfbot",
+  "name": "ksebot",
   "version": "1.0.0",
+  "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Tuic242",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^11.4.2",
-    "express": "^4.16.4",
-    "pm2": "^3.3.1"
-  },
-  "devDependencies": {},
-  "description": ""
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
