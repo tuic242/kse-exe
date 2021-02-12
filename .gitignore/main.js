@@ -11,12 +11,6 @@ var prefix = "§"
 //Debut Parametres Heroku 
 app.set('port',(process.env.PORT || 5000))
 
-bot.on('ready', () => {
-	console.log('Bot Launched..')
-	bot.user.setStatus('Do not disturb')
-        bot.user.setActivity('Un projet, KSE.', ({type: "WATCHING"}))
-});
-
 bot.on('guildMemberAdd', member => {
     
     const channelwelcomeembed = new Discord.MessageEmbed()
