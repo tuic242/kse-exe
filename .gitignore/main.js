@@ -13,7 +13,7 @@ app.set('port',(process.env.PORT || 5000))
 bot.on('ready', () => {
 	console.log('Bot Launched..')
 	bot.user.setStatus('Do not disturb')
-        bot.user.setActivity('ça mise a jour en cours', ({type: "WATCHING"}))
+        bot.user.setActivity('Un projet, KSE.', ({type: "WATCHING"}))
 });
 
 
