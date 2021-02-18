@@ -2,8 +2,6 @@ const Discord = require('discord.js')
 const client = new Discord.Client({partials: ["MESSAGE", "CHANNELS", "REACTION" ]});
 const prefix = '_'
 
-app.set('port',(process.env.PORT || 5000))
-
 client.on('ready', () => {
     console.log(`En ligne`)
     client.user.setActivity('le groupe KSE', ({type: "WATCHING"}))
