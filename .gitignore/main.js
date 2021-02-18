@@ -18,7 +18,7 @@ client.on('guildMemberAdd', (member) => {
     client.channels.cache.get(channelID).send(embed)
 })
 client.on('guildMemberRemove', (member) => {
-    let channelID = '788188331267457086';
+    let channelID = '613703562060496922';
     if(member.guild.id != '354263712430948354') return;
     let embed = new Discord.MessageEmbed()
     .setTitle('A Bientot !')
