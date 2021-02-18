@@ -22,7 +22,7 @@ client.on('guildMemberRemove', (member) => {
     if(member.guild.id != '354263712430948354') return;
     let embed = new Discord.MessageEmbed()
     .setTitle('A Bientot !')
-    .setDescription(`${member.user.tag} Quitte le serveur.`)
+    .setDescription(`${member} Quitte le serveur.`)
     .setColor('#2e1400')
     .setTimestamp()
     client.channels.cache.get(channelID).send(embed)
