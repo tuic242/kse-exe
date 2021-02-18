@@ -8,7 +8,7 @@ client.on('ready', () => {
 })
 
 client.on('guildMemberAdd', (member) => {
-    let channelID = '788188331267457086';
+    let channelID = '613703562060496922';
     if(member.guild.id != '354263712430948354') return;
     let embed = new Discord.MessageEmbed()
     .setTitle('Bienvenue 👋 !')
