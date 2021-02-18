@@ -12,7 +12,7 @@ client.on('guildMemberAdd', (member) => {
     if(member.guild.id != '354263712430948354') return;
     let embed = new Discord.MessageEmbed()
     .setTitle('Bienvenue 👋 !')
-    .setDescription(`${member.user.tag} Bonjours a toi ! Hesite pas aller lire le reglement.`)
+    .setDescription(`${member} Bonjours a toi ! Hesite pas aller lire le reglement.`)
     .setColor('#2e1400')
     .setTimestamp()
     client.channels.cache.get(channelID).send(embed)
