@@ -18,8 +18,8 @@ client.on('guildMemberAdd', (member) => {
     client.channels.cache.get(channelID).send(embed)
 })
 client.on('guildMemberRemove', (member) => {
-    let channelID = '613703562060496922';
-    if(member.guild.id != '788188330519953410') return;
+    let channelID = '788188331267457086';
+    if(member.guild.id != '354263712430948354') return;
     let embed = new Discord.MessageEmbed()
     .setTitle('A Bientot !')
     .setDescription(`${member.user.tag} Quitte le serveur.`)
