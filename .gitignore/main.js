@@ -61,6 +61,7 @@ client.on('message', message => {
         .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
         .setTimestamp()
         message.channel.send(embed)
+    }
 })
 
 client.on('message', message => {
