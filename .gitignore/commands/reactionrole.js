@@ -1,70 +1,63 @@
-const Discord = require('discord.js');
+module.exports = {
+  name: 'reactionrole',
+  description: "Sets up a reaction role message!",
+  async execute(message, args, Discord, client) {
+      const channel = '696684380374171740';
+      const yellowTeamRole = message.guild.roles.cache.find(role => role.name === "NotificationStream");
+      const blueTeamRole = message.guild.roles.cache.find(role => role.name === "NotificationMiniJeux");
 
-const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION" ]});
+      const yellowTeamEmoji = '🔴';
+      const blueTeamEmoji = '🎮';
 
-const prefix = '_';
+      let embed = new Discord.MessageEmbed()
+          .setColor('#e42643')
+          .setTitle('Notification Role')
+          .setDescription('Tu a juste a cliquer sur le(s) emoji(s) en desous pour obtenir le(s) role(s) demandé(s).\n\n'
+              + `${yellowTeamEmoji} Pour les stream de Tuic242_, Firawar, Jeffsite et meme de KSE.\n`
+              + `${blueTeamEmoji} Pour les sessions de mini jeux !`);
 
-const fs = require('fs');
+      let messageEmbed = await message.channel.send(embed);
+      messageEmbed.react(yellowTeamEmoji);
+      messageEmbed.react(blueTeamEmoji);
 
-client.commands = new Discord.Collection();
- 
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-for (const file of commandFiles) {
-    const command = require(`./commands/${file}`);
- 
-    client.commands.set(command.name, command);
+      client.on('messageReactionAdd', async (reaction, user) => {
+          if (reaction.message.partial) await reaction.message.fetch();
+          if (reaction.partial) await reaction.fetch();
+          if (user.bot) return;
+          if (!reaction.message.guild) return;
+
+          if (reaction.message.channel.id == channel) {
+              if (reaction.emoji.name === yellowTeamEmoji) {
+                  await reaction.message.guild.members.cache.get(user.id).roles.add(yellowTeamRole);
+              }
+              if (reaction.emoji.name === blueTeamEmoji) {
+                  await reaction.message.guild.members.cache.get(user.id).roles.add(blueTeamRole);
+              }
+          } else {
+              return;
+          }
+
+      });
+
+      client.on('messageReactionRemove', async (reaction, user) => {
+
+          if (reaction.message.partial) await reaction.message.fetch();
+          if (reaction.partial) await reaction.fetch();
+          if (user.bot) return;
+          if (!reaction.message.guild) return;
+
+
+          if (reaction.message.channel.id == channel) {
+              if (reaction.emoji.name === yellowTeamEmoji) {
+                  await reaction.message.guild.members.cache.get(user.id).roles.remove(yellowTeamRole);
+              }
+              if (reaction.emoji.name === blueTeamEmoji) {
+                  await reaction.message.guild.members.cache.get(user.id).roles.remove(blueTeamRole);
+              }
+          } else {
+              return;
+          }
+      });
+  }
+
 }
-
-client.on('ready', () => {
-    console.log(`En ligne`)
-    client.user.setActivity('le groupe KSE', ({type: "WATCHING"}))
-})
-
-client.on('guildMemberAdd', (member) => {
-    let channelID = '788188331267457086';
-    if(member.guild.id != '788188330519953410') return;
-    let embed = new Discord.MessageEmbed()
-    .setTitle('Bienvenue 👋 !')
-    .setDescription(`${member.user.tag} Bonjours a toi ! Hesite pas aller lire le reglement.`)
-    .setColor('#2e1400')
-    .setTimestamp()
-    client.channels.cache.get(channelID).send(embed)
-})
-client.on('guildMemberRemove', (member) => {
-    let channelID = '788188331267457086';
-    if(member.guild.id != '788188330519953410') return;
-    let embed = new Discord.MessageEmbed()
-    .setTitle('A Bientot !')
-    .setDescription(`${member.user.tag} Quitte le serveur.`)
-    .setColor('#2e1400')
-    .setTimestamp()
-    client.channels.cache.get(channelID).send(embed)
-})
-
-client.on('message', message => {
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
-
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
-
-    if(command === 'ping'){
-        message.channel.send('ping #brain')
-    }
-    if(command === 'help'){
-        message.channel.send('***En cours de redaction***')
-    }
-})
-
-client.on('message', message => {
- 
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
- 
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase();
-    if (command === 'reactionrole') {
-        client.commands.get('reactionrole').execute(message, args, Discord, client);
-    } 
-  
-});
-
-client.login('ODExNzEzMjg0Nzk2NTc5OTMy.YC2M5w.-WqNBSg72Lam3VEFiwnbCRaSlCU');
