@@ -53,14 +53,45 @@ client.on('message', message => {
     if(command === 'help'){
         message.channel.send('***En cours de redaction***')
     }
-    if (message.content === 'HINTRO') {
-        let embed = new Discord.MessageEmbed()
-        .setTitle("__**Introduction :**__")
-        .setColor('#2e1400')
-        .setDescription(" Keep Still Entertainment et un serveur créé en 2017 par 6 adolescents passionnés par le roleplay, dans l'objectif d'en faire sur ROBLOX, KSE avec les années évoluera, changera de nom, de map, de maturité. \n\n Aujourd'hui KSE a pour objectif de changer l'image du roleplay francophone sur ROBLOX, mais aussi de développer des serveurs sûrs d'autres jeux (comme sur ARMAIII par exemple), mais aussi de développer et de ce lancer dans des projets de développement et de création jeux vidéo. \n\n __**Le groupe KSE :**__ \n - KSP / Keep Still Production : Studio de developpement des jeux KSE. \n - KSE / Keep Still Entertainment : Editeur et administrateur des production de KSP.\n\n __**Le staff Le staff de KSE est constitué de 3 grades :**__ \n - Administrateur : Personne ayant soit fonde le serveur ou ayant récolté la plus haute confiance des fondateurs et ayant travaillé dur pour le serveur. \n - Modérateur : Personne ayant la mission et tous les pouvoirs dans objectif de faire respecter les règles générales de KSE mais aussi en fonction des jeux d'affection \n - Equipe de développement : Personne étant membre du studio de développement KSP")
-        .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
-        .setTimestamp()
-        message.channel.send(embed)
+})
+
+client.on('message', function (message) {
+    if (message.content === '_infrastrucutures') {
+    let embed = new Discord.MessageEmbed()
+    .setColor('#E70606')
+	.setTitle('Status de nos infrastructures')	
+    .setDescription(`🎮 Serveur ROBLOX = ❌ \n\n 📰 Serveur DISCORD KSE = ✅ \n\n 🚓 Serveur DISCORD Gendarmerie = ✅ \n\n 🚒 Serveur DISCORD Sapeurs Pompiers = ✅ \n\n 👷 Serveur DISCORD D.I.R = ⚠️[MAINTENANCE] \n\n 🛡️ Serveur DISCORD Staff = ✅ \n\n ***Un probleme avec une de nos infrastructure ? Merci de le signaler <#613710890981654538>***`) 
+	.setTimestamp()
+	message.channel.send(embed)
+    }
+})
+
+client.on('message', function (message) {
+    if (message.content === '_serveuroff') {
+    let embed = new Discord.MessageEmbed()
+    .setColor('#2e1400')
+	.setTitle('<:Probleme:622741519492710440> Session ROLEPLAY')	
+    .setDescription(`Aucune session n'est possible, le serveur V1.4 étant affecté par un problème important d'optimisation. Notre équipe de développement et entrain de travailler sur une version 2.`) 
+	.setTimestamp()
+	message.channel.send(embed)
+    }
+})
+
+client.on('message', function (message) {
+    if (message.content === '_averto1') {
+        let args = message.content.split(" ").slice(1);
+        let msge = args.join(' ');
+        let channelID = '660809651817938954';
+
+        if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
+                if(!msge) return message.channel.send("Precise une raison.")
+
+    let embed = new Discord.MessageEmbed()
+    .setColor('#E70606')
+	.setTitle(`Systeme d'administration et de moderation`)	
+    .setDescription("Keep Still Entertainment :", msge)
+	.setTimestamp()
+    client.channels.cache.get(channelID).send(embed)
     }
 })
 
@@ -76,4 +107,4 @@ client.on('message', message => {
   
 });
 
-client.login(process.env.TOKEN)
+client.login('ODExNzEzMjg0Nzk2NTc5OTMy.YC2M5w.iumolzQ25_2IUSpSJf6UtSe3DYo');
