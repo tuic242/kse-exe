@@ -77,24 +77,6 @@ client.on('message', function (message) {
     }
 })
 
-client.on('message', function (message) {
-    if (message.content === '_averto1') {
-        let args = message.content.split(" ").slice(1);
-        let msge = args.join(' ');
-        let channelID = '660809651817938954';
-
-        if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
-                if(!msge) return message.channel.send("Precise une raison.")
-
-    let embed = new Discord.MessageEmbed()
-    .setColor('#E70606')
-	.setTitle(`Systeme d'administration et de moderation`)	
-    .setDescription("Keep Still Entertainment :", msge)
-	.setTimestamp()
-    client.channels.cache.get(channelID).send(embed)
-    }
-})
-
 client.on('message', message => {
  
     if (!message.content.startsWith(prefix) || message.author.bot) return;
