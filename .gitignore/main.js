@@ -4,7 +4,7 @@ const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION" 
 
 client.on('ready', () => {
     console.log(`En ligne`)
-    client.user.setActivity('le groupe KSE', ({type: "WATCHING"}))
+    client.user.setActivity('V0.1', ({type: "WATCHING"}))
 })
 
 client.on('guildMemberAdd', (member) => {
