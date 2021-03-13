@@ -4,11 +4,11 @@ const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION" 
 
 client.on('ready', () => {
     console.log(`En ligne`)
-    client.user.setActivity('V0.1', ({type: "WATCHING"}))
+    client.user.setActivity('V0.11', ({type: "WATCHING"}))
 })
 
 client.on('guildMemberAdd', (member) => {
-    let channelID = '613707298350563328';
+    let channelID = '613703562060496922';
     if(member.guild.id != '788188330519953410') return;
     let embed = new Discord.MessageEmbed()
     .setTitle('Bienvenue 👋 !')
@@ -18,7 +18,7 @@ client.on('guildMemberAdd', (member) => {
     client.channels.cache.get(channelID).send(embed)
 })
 client.on('guildMemberRemove', (member) => {
-    let channelID = '613707298350563328';
+    let channelID = '613703562060496922';
     if(member.guild.id != '788188330519953410') return;
     let embed = new Discord.MessageEmbed()
     .setTitle('A Bientot !')
