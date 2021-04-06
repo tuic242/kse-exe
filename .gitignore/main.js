@@ -17,11 +17,11 @@ for (const file of commandFiles) {
 
 client.on('ready', () => {
     console.log(`En ligne`)
-    client.user.setActivity('En cours de test...', ({type: "WATCHING"}))
+    client.user.setActivity('Restez Chez Vous', ({type: "WATCHING"}))
 })
 
 client.on('guildMemberAdd', (member) => {
-    let channelID = '613707298350563328';
+    let channelID = '613703562060496922';
     if(member.guild.id != '354263712430948354') return;
     let embed = new Discord.MessageEmbed()
     .setTitle('Bienvenue 👋 !')
@@ -31,7 +31,7 @@ client.on('guildMemberAdd', (member) => {
     client.channels.cache.get(channelID).send(embed)
 })
 client.on('guildMemberRemove', (member) => {
-    let channelID = '613707298350563328';
+    let channelID = '613703562060496922';
     if(member.guild.id != '354263712430948354') return;
     let embed = new Discord.MessageEmbed()
     .setTitle('A Bientot !')
