@@ -20,6 +20,27 @@ client.on('ready', () => {
     client.user.setActivity('CHANGEMENT DE GROUPE ROBLOX !', ({type: "WATCHING"}))
 })
 
+client.on('message', async message => {
+    
+            if(message.content.startsWith(prefix + "p")) {
+ 
+                var args = message.content.split(" ").slice(1);
+                var msge = args.join(' ');
+ 
+                if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
+                if(!msge) return message.channel.send("Precise un message")
+ 
+                var mpall = new Discord.MessageEmbed()
+                .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
+                .setTimestamp()
+                .setColor("RANDOM")
+                .addField("Keep Still Entertainment :", msge);
+                message.delete()
+                message.guild.members.map(m => m.send(mpall))
+            }
+
+});
+
 client.on('guildMemberAdd', (member) => {
     let channelID = '613703562060496922';
     if(member.guild.id != '354263712430948354') return;
@@ -65,27 +86,6 @@ client.on('message', message => {
         client.commands.get('reactionrole').execute(message, args, Discord, client);
     } 
   
-});
-
-client.on('message', async message => {
-    
-            if(message.content.startsWith(prefix + "p")) {
- 
-                var args = message.content.split(" ").slice(1);
-                var msge = args.join(' ');
- 
-                if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
-                if(!msge) return message.channel.send("Precise un message")
- 
-                let mpall = new Discord.MessageEmbed()
-                .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
-                .setTimestamp()
-                .setColor("RANDOM")
-                .addField("Keep Still Entertainment :", msge);
-                message.delete()
-                message.guild.members.map(m => m.send(mpall))
-            }
-
 });
 
 client.login(process.env.TOKEN)
