@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 
-const { Client, RichEmbed } = require('discord.js');
-
 const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION" ]});
 
 const prefix = '_';
@@ -79,7 +77,7 @@ client.on('message', async message => {
                 if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.channel.send("❌ Tu n'as pas la permission d'utiliser cette commande!");
                 if(!msge) return message.channel.send("Precise un message")
  
-                var mpall = new Discord.RichEmbed()
+                let embed = new Discord.MessageEmbed()
                 .setThumbnail("https://cdn.discordapp.com/attachments/613697754614595597/784589295168127006/KSEDISC.png")
                 .setTimestamp()
                 .setColor("RANDOM")
