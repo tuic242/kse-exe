@@ -80,7 +80,7 @@ client.on('message', message => {
     if(message.author.bot) return;
 
     if(command === 'regl'){
-        .setcolor("#0099ff")
+        .setColor("#0099ff")
         .setTitle("**Reglement**")
         .setURL("kse.com")
         .setAuthor("Keep Still Entertainment")
