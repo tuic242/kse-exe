@@ -79,7 +79,7 @@ client.on('message', message => {
 client.on('message', message => {
     if(message.author.bot) return;
 
-    var embed = new Discord.MessageEmbed()
+    if(command === 'regl'){
         .setcolor("#0099ff")
         .setTitle("**Reglement**")
         .setURL("kse.com")
