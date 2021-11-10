@@ -77,6 +77,18 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
+    if(message.author.bot) return;
+
+    var embed = new Discord.MessageEmbed()
+        .setcolor("#0099ff")
+        .setTitle("**Reglement**")
+        .setURL("kse.com")
+        .setAuthor("Keep Still Entertainment")
+        .setDescription("Description du Message")
+    message.channel.send(embed);
+});
+
+client.on('message', message => {
  
     if (!message.content.startsWith(prefix) || message.author.bot) return;
  
