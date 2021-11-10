@@ -77,7 +77,7 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-    if(message.author.bot) return;
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
 
     if(command === 'regl'){
         .setColor("#791C08")
@@ -85,8 +85,9 @@ client.on('message', message => {
         .setURL("kse.com")
         .setAuthor("Keep Still Entertainment")
         .setDescription("Description du Message")
-    message.channel.send(embed);
-});
+        message.channel.send(embed);
+    }
+})
 
 client.on('message', message => {
  
