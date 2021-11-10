@@ -17,7 +17,7 @@ for (const file of commandFiles) {
 
 client.on('ready', () => {
     console.log(`En ligne`)
-    client.user.setActivity('CHANGEMENT DE GROUPE ROBLOX !', ({type: "WATCHING"}))
+    client.user.setActivity('Keep Still Entertainment', ({type: "WATCHING"}))
 })
 
 client.on('message', async message => {
